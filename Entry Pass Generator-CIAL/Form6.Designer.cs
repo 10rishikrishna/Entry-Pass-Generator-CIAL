@@ -352,7 +352,7 @@
             textBox1.Location = new Point(12, 45);
             textBox1.Multiline = true;
             textBox1.Name = "textBox1";
-            textBox1.PlaceholderText = "Enter Aadhaar Number";
+            textBox1.PlaceholderText = "Enter LaborID Number";
             textBox1.Size = new Size(552, 50);
             textBox1.TabIndex = 1;
             textBox1.TextChanged += textBox1_TextChanged;
@@ -363,9 +363,9 @@
             label1.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.Location = new Point(12, 13);
             label1.Name = "label1";
-            label1.Size = new Size(358, 23);
+            label1.Size = new Size(355, 23);
             label1.TabIndex = 0;
-            label1.Text = "Enter the Aadhaar Number of the worker";
+            label1.Text = "Enter the LaborId Number of the worker";
             // 
             // Form6
             // 

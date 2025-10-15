@@ -1,4 +1,5 @@
-﻿namespace Entry_Pass_Generator_CIAL
+﻿
+namespace Entry_Pass_Generator_CIAL
 {
     partial class Form4
     {
@@ -49,25 +50,27 @@
             label14 = new Label();
             pictureBox2 = new PictureBox();
             Labour_infobox = new GroupBox();
-            textBox9 = new TextBox();
+            Contractorname = new TextBox();
             label9 = new Label();
-            textBox8 = new TextBox();
+            addressbox = new TextBox();
             label8 = new Label();
-            textBox7 = new TextBox();
+            lastname = new TextBox();
             label7 = new Label();
-            textBox6 = new TextBox();
+            Contactno = new TextBox();
             label6 = new Label();
-            textBox5 = new TextBox();
+            aadhar = new TextBox();
             label5 = new Label();
-            textBox4 = new TextBox();
+            statebox = new TextBox();
             label4 = new Label();
-            textBox3 = new TextBox();
+            fathermothername = new TextBox();
             label3 = new Label();
-            textBox2 = new TextBox();
+            firstname = new TextBox();
             label2 = new Label();
-            textBox1 = new TextBox();
+            labourid = new TextBox();
             label1 = new Label();
             Photos = new GroupBox();
+            removeaadharimage = new Button();
+            removefaceimage = new Button();
             label13 = new Label();
             button4 = new Button();
             button3 = new Button();
@@ -80,11 +83,12 @@
             label10 = new Label();
             pictureBox4 = new PictureBox();
             pictureBox3 = new PictureBox();
-            button5 = new Button();
-            button6 = new Button();
+            clear = new Button();
+            save = new Button();
             button7 = new Button();
             panel2 = new Panel();
             label24 = new Label();
+            keepphoto = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox13).BeginInit();
@@ -336,23 +340,23 @@
             // Labour_infobox
             // 
             Labour_infobox.BackColor = Color.White;
-            Labour_infobox.Controls.Add(textBox9);
+            Labour_infobox.Controls.Add(Contractorname);
             Labour_infobox.Controls.Add(label9);
-            Labour_infobox.Controls.Add(textBox8);
+            Labour_infobox.Controls.Add(addressbox);
             Labour_infobox.Controls.Add(label8);
-            Labour_infobox.Controls.Add(textBox7);
+            Labour_infobox.Controls.Add(lastname);
             Labour_infobox.Controls.Add(label7);
-            Labour_infobox.Controls.Add(textBox6);
+            Labour_infobox.Controls.Add(Contactno);
             Labour_infobox.Controls.Add(label6);
-            Labour_infobox.Controls.Add(textBox5);
+            Labour_infobox.Controls.Add(aadhar);
             Labour_infobox.Controls.Add(label5);
-            Labour_infobox.Controls.Add(textBox4);
+            Labour_infobox.Controls.Add(statebox);
             Labour_infobox.Controls.Add(label4);
-            Labour_infobox.Controls.Add(textBox3);
+            Labour_infobox.Controls.Add(fathermothername);
             Labour_infobox.Controls.Add(label3);
-            Labour_infobox.Controls.Add(textBox2);
+            Labour_infobox.Controls.Add(firstname);
             Labour_infobox.Controls.Add(label2);
-            Labour_infobox.Controls.Add(textBox1);
+            Labour_infobox.Controls.Add(labourid);
             Labour_infobox.Controls.Add(label1);
             Labour_infobox.Font = new Font("Times New Roman", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Labour_infobox.Location = new Point(258, 96);
@@ -362,15 +366,16 @@
             Labour_infobox.TabStop = false;
             Labour_infobox.Text = "Basic Information";
             // 
-            // textBox9
+            // Contractorname
             // 
-            textBox9.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox9.Location = new Point(672, 175);
-            textBox9.Multiline = true;
-            textBox9.Name = "textBox9";
-            textBox9.PlaceholderText = "Enter Contractor's Name";
-            textBox9.Size = new Size(313, 36);
-            textBox9.TabIndex = 18;
+            Contractorname.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Contractorname.Location = new Point(672, 175);
+            Contractorname.Multiline = true;
+            Contractorname.Name = "Contractorname";
+            Contractorname.PlaceholderText = "Enter Contractor's Name";
+            Contractorname.Size = new Size(313, 36);
+            Contractorname.TabIndex = 18;
+            Contractorname.TextChanged += Contractorname_TextChanged;
             // 
             // label9
             // 
@@ -382,15 +387,16 @@
             label9.TabIndex = 17;
             label9.Text = "Contractor's Name";
             // 
-            // textBox8
+            // addressbox
             // 
-            textBox8.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox8.Location = new Point(672, 249);
-            textBox8.Multiline = true;
-            textBox8.Name = "textBox8";
-            textBox8.PlaceholderText = "Enter Address";
-            textBox8.Size = new Size(313, 71);
-            textBox8.TabIndex = 16;
+            addressbox.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            addressbox.Location = new Point(672, 249);
+            addressbox.Multiline = true;
+            addressbox.Name = "addressbox";
+            addressbox.PlaceholderText = "Enter Address";
+            addressbox.Size = new Size(313, 71);
+            addressbox.TabIndex = 16;
+            addressbox.TextChanged += address_TextChanged;
             // 
             // label8
             // 
@@ -402,15 +408,16 @@
             label8.TabIndex = 15;
             label8.Text = "Address ";
             // 
-            // textBox7
+            // lastname
             // 
-            textBox7.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox7.Location = new Point(356, 175);
-            textBox7.Multiline = true;
-            textBox7.Name = "textBox7";
-            textBox7.PlaceholderText = "Enter Last Name";
-            textBox7.Size = new Size(284, 36);
-            textBox7.TabIndex = 14;
+            lastname.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lastname.Location = new Point(356, 175);
+            lastname.Multiline = true;
+            lastname.Name = "lastname";
+            lastname.PlaceholderText = "Enter Last Name";
+            lastname.Size = new Size(284, 36);
+            lastname.TabIndex = 14;
+            lastname.TextChanged += lastname_TextChanged;
             // 
             // label7
             // 
@@ -422,15 +429,16 @@
             label7.TabIndex = 13;
             label7.Text = "Last Name";
             // 
-            // textBox6
+            // Contactno
             // 
-            textBox6.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox6.Location = new Point(672, 74);
-            textBox6.Multiline = true;
-            textBox6.Name = "textBox6";
-            textBox6.PlaceholderText = "Enter Contact Number";
-            textBox6.Size = new Size(313, 36);
-            textBox6.TabIndex = 12;
+            Contactno.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Contactno.Location = new Point(672, 74);
+            Contactno.Multiline = true;
+            Contactno.Name = "Contactno";
+            Contactno.PlaceholderText = "Enter Contact Number";
+            Contactno.Size = new Size(313, 36);
+            Contactno.TabIndex = 12;
+            Contactno.TextChanged += textBox6_TextChanged;
             // 
             // label6
             // 
@@ -442,15 +450,16 @@
             label6.TabIndex = 11;
             label6.Text = "Contact Number";
             // 
-            // textBox5
+            // aadhar
             // 
-            textBox5.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox5.Location = new Point(356, 74);
-            textBox5.Multiline = true;
-            textBox5.Name = "textBox5";
-            textBox5.PlaceholderText = "Enter Aadhar Number";
-            textBox5.Size = new Size(284, 36);
-            textBox5.TabIndex = 10;
+            aadhar.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            aadhar.Location = new Point(356, 74);
+            aadhar.Multiline = true;
+            aadhar.Name = "aadhar";
+            aadhar.PlaceholderText = "Enter Aadhar Number";
+            aadhar.Size = new Size(284, 36);
+            aadhar.TabIndex = 10;
+            aadhar.TextChanged += aadhar_TextChanged;
             // 
             // label5
             // 
@@ -462,15 +471,16 @@
             label5.TabIndex = 9;
             label5.Text = "Aadhar Number";
             // 
-            // textBox4
+            // statebox
             // 
-            textBox4.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox4.Location = new Point(356, 284);
-            textBox4.Multiline = true;
-            textBox4.Name = "textBox4";
-            textBox4.PlaceholderText = "Enter State";
-            textBox4.Size = new Size(284, 36);
-            textBox4.TabIndex = 8;
+            statebox.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            statebox.Location = new Point(356, 284);
+            statebox.Multiline = true;
+            statebox.Name = "statebox";
+            statebox.PlaceholderText = "Enter State";
+            statebox.Size = new Size(284, 36);
+            statebox.TabIndex = 8;
+            statebox.TextChanged += state_TextChanged;
             // 
             // label4
             // 
@@ -482,15 +492,16 @@
             label4.TabIndex = 7;
             label4.Text = "State";
             // 
-            // textBox3
+            // fathermothername
             // 
-            textBox3.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox3.Location = new Point(43, 284);
-            textBox3.Multiline = true;
-            textBox3.Name = "textBox3";
-            textBox3.PlaceholderText = "Enter Parent's Name";
-            textBox3.Size = new Size(284, 36);
-            textBox3.TabIndex = 6;
+            fathermothername.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            fathermothername.Location = new Point(43, 284);
+            fathermothername.Multiline = true;
+            fathermothername.Name = "fathermothername";
+            fathermothername.PlaceholderText = "Enter Parent's Name";
+            fathermothername.Size = new Size(284, 36);
+            fathermothername.TabIndex = 6;
+            fathermothername.TextChanged += fathermothername_TextChanged;
             // 
             // label3
             // 
@@ -502,15 +513,16 @@
             label3.TabIndex = 5;
             label3.Text = "Father/Mother's Name";
             // 
-            // textBox2
+            // firstname
             // 
-            textBox2.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox2.Location = new Point(43, 175);
-            textBox2.Multiline = true;
-            textBox2.Name = "textBox2";
-            textBox2.PlaceholderText = "Enter First Name";
-            textBox2.Size = new Size(284, 36);
-            textBox2.TabIndex = 4;
+            firstname.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            firstname.Location = new Point(43, 175);
+            firstname.Multiline = true;
+            firstname.Name = "firstname";
+            firstname.PlaceholderText = "Enter First Name";
+            firstname.Size = new Size(284, 36);
+            firstname.TabIndex = 4;
+            firstname.TextChanged += firstname_TextChanged;
             // 
             // label2
             // 
@@ -522,15 +534,16 @@
             label2.TabIndex = 3;
             label2.Text = "First Name";
             // 
-            // textBox1
+            // labourid
             // 
-            textBox1.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(43, 74);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.PlaceholderText = "Enter Labour Id";
-            textBox1.Size = new Size(273, 36);
-            textBox1.TabIndex = 2;
+            labourid.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            labourid.Location = new Point(43, 74);
+            labourid.Multiline = true;
+            labourid.Name = "labourid";
+            labourid.PlaceholderText = "Enter Labour Id";
+            labourid.Size = new Size(273, 36);
+            labourid.TabIndex = 2;
+            labourid.TextChanged += textBox1_TextChanged;
             // 
             // label1
             // 
@@ -545,6 +558,9 @@
             // Photos
             // 
             Photos.BackColor = Color.White;
+            Photos.Controls.Add(keepphoto);
+            Photos.Controls.Add(removeaadharimage);
+            Photos.Controls.Add(removefaceimage);
             Photos.Controls.Add(label13);
             Photos.Controls.Add(button4);
             Photos.Controls.Add(button3);
@@ -565,6 +581,32 @@
             Photos.TabStop = false;
             Photos.Text = "Documents ";
             // 
+            // removeaadharimage
+            // 
+            removeaadharimage.BackColor = Color.WhiteSmoke;
+            removeaadharimage.Cursor = Cursors.Hand;
+            removeaadharimage.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            removeaadharimage.Location = new Point(661, 261);
+            removeaadharimage.Name = "removeaadharimage";
+            removeaadharimage.Size = new Size(140, 29);
+            removeaadharimage.TabIndex = 19;
+            removeaadharimage.Text = "Clear Image";
+            removeaadharimage.UseVisualStyleBackColor = false;
+            removeaadharimage.Click += removeaadharimage_Click;
+            // 
+            // removefaceimage
+            // 
+            removefaceimage.BackColor = Color.WhiteSmoke;
+            removefaceimage.Cursor = Cursors.Hand;
+            removefaceimage.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            removefaceimage.Location = new Point(169, 261);
+            removefaceimage.Name = "removefaceimage";
+            removefaceimage.Size = new Size(140, 29);
+            removefaceimage.TabIndex = 15;
+            removefaceimage.Text = "Clear Image";
+            removefaceimage.UseVisualStyleBackColor = false;
+            removefaceimage.Click += removefaceimage_Click;
+            // 
             // label13
             // 
             label13.AutoSize = true;
@@ -579,7 +621,7 @@
             // 
             button4.BackColor = Color.Tomato;
             button4.Font = new Font("Times New Roman", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button4.Location = new Point(546, 261);
+            button4.Location = new Point(541, 261);
             button4.Name = "button4";
             button4.Size = new Size(112, 29);
             button4.TabIndex = 17;
@@ -590,12 +632,13 @@
             // 
             button3.BackColor = Color.Lime;
             button3.Font = new Font("Times New Roman", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button3.Location = new Point(799, 261);
+            button3.Location = new Point(807, 261);
             button3.Name = "button3";
             button3.Size = new Size(142, 29);
             button3.TabIndex = 16;
             button3.Text = "Upload Photo";
             button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
             // 
             // label12
             // 
@@ -631,23 +674,25 @@
             // 
             button2.BackColor = Color.Lime;
             button2.Font = new Font("Times New Roman", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button2.Location = new Point(301, 261);
+            button2.Location = new Point(315, 261);
             button2.Name = "button2";
             button2.Size = new Size(142, 29);
             button2.TabIndex = 12;
             button2.Text = "Upload Photo";
             button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // button1
             // 
             button1.BackColor = Color.Tomato;
             button1.Font = new Font("Times New Roman", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button1.Location = new Point(72, 261);
+            button1.Location = new Point(51, 261);
             button1.Name = "button1";
             button1.Size = new Size(112, 29);
             button1.TabIndex = 11;
             button1.Text = "Start Camera";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // pictureBox5
             // 
@@ -675,6 +720,7 @@
             pictureBox4.Location = new Point(527, 33);
             pictureBox4.Name = "pictureBox4";
             pictureBox4.Size = new Size(431, 274);
+            pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox4.TabIndex = 6;
             pictureBox4.TabStop = false;
             // 
@@ -684,32 +730,36 @@
             pictureBox3.Location = new Point(42, 33);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(424, 274);
+            pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox3.TabIndex = 5;
             pictureBox3.TabStop = false;
+            pictureBox3.Click += pictureBox3_Click;
             // 
-            // button5
+            // clear
             // 
-            button5.BackColor = Color.WhiteSmoke;
-            button5.Cursor = Cursors.Hand;
-            button5.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button5.Location = new Point(681, 783);
-            button5.Name = "button5";
-            button5.Size = new Size(127, 33);
-            button5.TabIndex = 13;
-            button5.Text = "Clear";
-            button5.UseVisualStyleBackColor = false;
+            clear.BackColor = Color.WhiteSmoke;
+            clear.Cursor = Cursors.Hand;
+            clear.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            clear.Location = new Point(681, 783);
+            clear.Name = "clear";
+            clear.Size = new Size(127, 33);
+            clear.TabIndex = 13;
+            clear.Text = "Clear";
+            clear.UseVisualStyleBackColor = false;
+            clear.Click += clear_Click;
             // 
-            // button6
+            // save
             // 
-            button6.BackColor = Color.FromArgb(0, 192, 0);
-            button6.Cursor = Cursors.Hand;
-            button6.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button6.Location = new Point(833, 783);
-            button6.Name = "button6";
-            button6.Size = new Size(127, 33);
-            button6.TabIndex = 12;
-            button6.Text = "Save";
-            button6.UseVisualStyleBackColor = false;
+            save.BackColor = Color.FromArgb(0, 192, 0);
+            save.Cursor = Cursors.Hand;
+            save.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            save.Location = new Point(833, 783);
+            save.Name = "save";
+            save.Size = new Size(127, 33);
+            save.TabIndex = 12;
+            save.Text = "Save";
+            save.UseVisualStyleBackColor = false;
+            save.Click += save_Click;
             // 
             // button7
             // 
@@ -742,6 +792,19 @@
             label24.Size = new Size(34, 38);
             label24.TabIndex = 39;
             label24.Text = "X";
+            label24.Click += label24_Click;
+            // 
+            // keepphoto
+            // 
+            keepphoto.BackColor = Color.Lime;
+            keepphoto.Font = new Font("Times New Roman", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            keepphoto.Location = new Point(344, 33);
+            keepphoto.Name = "keepphoto";
+            keepphoto.Size = new Size(122, 30);
+            keepphoto.TabIndex = 20;
+            keepphoto.Text = "Keep Photo";
+            keepphoto.UseVisualStyleBackColor = false;
+            keepphoto.Click += keepphoto_Click;
             // 
             // Form4
             // 
@@ -749,8 +812,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1288, 833);
             Controls.Add(panel2);
-            Controls.Add(button5);
-            Controls.Add(button6);
+            Controls.Add(clear);
+            Controls.Add(save);
             Controls.Add(button7);
             Controls.Add(Photos);
             Controls.Add(Labour_infobox);
@@ -786,6 +849,8 @@
             ResumeLayout(false);
         }
 
+       
+
         #endregion
 
         private PictureBox pictureBox1;
@@ -793,22 +858,22 @@
         private PictureBox pictureBox2;
         private GroupBox Labour_infobox;
         private Label label1;
-        private TextBox textBox1;
-        private TextBox textBox4;
+        private TextBox labourid;
+        private TextBox statebox;
         private Label label4;
-        private TextBox textBox3;
+        private TextBox fathermothername;
         private Label label3;
-        private TextBox textBox2;
+        private TextBox firstname;
         private Label label2;
-        private TextBox textBox9;
+        private TextBox Contractorname;
         private Label label9;
-        private TextBox textBox8;
+        private TextBox addressbox;
         private Label label8;
-        private TextBox textBox7;
+        private TextBox lastname;
         private Label label7;
-        private TextBox textBox6;
+        private TextBox Contactno;
         private Label label6;
-        private TextBox textBox5;
+        private TextBox aadhar;
         private Label label5;
         private GroupBox Photos;
         private Label label10;
@@ -823,8 +888,8 @@
         private Button button3;
         private Label label12;
         private PictureBox pictureBox6;
-        private Button button5;
-        private Button button6;
+        private Button clear;
+        private Button save;
         private Button button7;
         private Panel panel2;
         private Label label14;
@@ -844,5 +909,8 @@
         private PictureBox pictureBox13;
         private Label label22;
         private Label label24;
+        private Button removeaadharimage;
+        private Button removefaceimage;
+        private Button keepphoto;
     }
 }

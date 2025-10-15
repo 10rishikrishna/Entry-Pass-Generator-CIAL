@@ -91,5 +91,10 @@ namespace Entry_Pass_Generator_CIAL
             form3.Show();
             this.Hide();
         }
+
+        private void Form7_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

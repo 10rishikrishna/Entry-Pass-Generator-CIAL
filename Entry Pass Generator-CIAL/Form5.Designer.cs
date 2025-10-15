@@ -48,34 +48,49 @@
             pictureBox8 = new PictureBox();
             pictureBox11 = new PictureBox();
             Labour_infobox = new GroupBox();
-            textBox2 = new TextBox();
+            arearenew = new TextBox();
+            clearbtn = new Button();
             label11 = new Label();
-            dateTimePicker5 = new DateTimePicker();
+            savebtn = new Button();
+            button1 = new Button();
+            dobrenew = new DateTimePicker();
             label6 = new Label();
             label8 = new Label();
-            dateTimePicker4 = new DateTimePicker();
-            dateTimePicker3 = new DateTimePicker();
+            outdatetime = new DateTimePicker();
+            entrytime = new DateTimePicker();
             label24 = new Label();
             label3 = new Label();
             label2 = new Label();
-            dateTimePicker2 = new DateTimePicker();
-            dateTimePicker1 = new DateTimePicker();
-            textBox9 = new TextBox();
+            outdaterenew = new DateTimePicker();
+            indate = new DateTimePicker();
+            contractorrenew = new TextBox();
             label7 = new Label();
-            textBox5 = new TextBox();
+            gaterenew = new TextBox();
             label5 = new Label();
-            textBox4 = new TextBox();
+            fullnamerenew = new TextBox();
             label4 = new Label();
-            textBox1 = new TextBox();
+            labourrenew = new TextBox();
             label1 = new Label();
+            watchpreview = new Button();
             groupBox1 = new GroupBox();
             panel3 = new Panel();
+            totimepasscial = new TextBox();
+            textBox1 = new TextBox();
+            gatespass = new TextBox();
+            areaspass = new TextBox();
+            label27 = new Label();
+            label26 = new Label();
+            textBox15 = new TextBox();
+            label25 = new Label();
+            label23 = new Label();
+            todaypass = new TextBox();
+            fromdaypass = new TextBox();
             textBox10 = new TextBox();
             textBox8 = new TextBox();
             label13 = new Label();
-            textBox7 = new TextBox();
-            textBox3 = new TextBox();
-            textBox6 = new TextBox();
+            dobpass = new TextBox();
+            contractorpass = new TextBox();
+            labouridpass = new TextBox();
             label12 = new Label();
             label9 = new Label();
             namepass = new TextBox();
@@ -88,21 +103,9 @@
             panel2 = new Panel();
             pictureBox4 = new PictureBox();
             pictureBox2 = new PictureBox();
-            button1 = new Button();
-            button4 = new Button();
-            button5 = new Button();
             pictureBox3 = new PictureBox();
             label10 = new Label();
             sqlCommand1 = new Microsoft.Data.SqlClient.SqlCommand();
-            textBox11 = new TextBox();
-            textBox14 = new TextBox();
-            label23 = new Label();
-            label25 = new Label();
-            textBox15 = new TextBox();
-            label26 = new Label();
-            label27 = new Label();
-            textBox16 = new TextBox();
-            textBox17 = new TextBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox13).BeginInit();
@@ -132,7 +135,6 @@
             pictureBox1.Size = new Size(240, 92);
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
-            pictureBox1.Click += pictureBox1_Click;
             // 
             // panel1
             // 
@@ -178,7 +180,6 @@
             label16.Size = new Size(145, 23);
             label16.TabIndex = 62;
             label16.Text = "Blacklist People";
-            label16.Click += label16_Click;
             // 
             // label22
             // 
@@ -190,7 +191,6 @@
             label22.Size = new Size(70, 23);
             label22.TabIndex = 69;
             label22.Text = "Logout";
-            label22.Click += label22_Click;
             // 
             // label14
             // 
@@ -225,7 +225,6 @@
             label15.Size = new Size(180, 23);
             label15.TabIndex = 56;
             label15.Text = "Labour Registration";
-            label15.Click += label15_Click;
             // 
             // pictureBox12
             // 
@@ -248,7 +247,6 @@
             pictureBox7.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox7.TabIndex = 57;
             pictureBox7.TabStop = false;
-            pictureBox7.Click += pictureBox7_Click;
             // 
             // pictureBox9
             // 
@@ -315,7 +313,6 @@
             label17.Size = new Size(129, 23);
             label17.TabIndex = 60;
             label17.Text = "Search Passes";
-            label17.Click += label17_Click;
             // 
             // pictureBox8
             // 
@@ -337,30 +334,32 @@
             pictureBox11.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox11.TabIndex = 61;
             pictureBox11.TabStop = false;
-            pictureBox11.Click += pictureBox11_Click;
             // 
             // Labour_infobox
             // 
             Labour_infobox.BackColor = Color.White;
-            Labour_infobox.Controls.Add(textBox2);
+            Labour_infobox.Controls.Add(arearenew);
+            Labour_infobox.Controls.Add(clearbtn);
             Labour_infobox.Controls.Add(label11);
-            Labour_infobox.Controls.Add(dateTimePicker5);
+            Labour_infobox.Controls.Add(savebtn);
+            Labour_infobox.Controls.Add(button1);
+            Labour_infobox.Controls.Add(dobrenew);
             Labour_infobox.Controls.Add(label6);
             Labour_infobox.Controls.Add(label8);
-            Labour_infobox.Controls.Add(dateTimePicker4);
-            Labour_infobox.Controls.Add(dateTimePicker3);
+            Labour_infobox.Controls.Add(outdatetime);
+            Labour_infobox.Controls.Add(entrytime);
             Labour_infobox.Controls.Add(label24);
             Labour_infobox.Controls.Add(label3);
             Labour_infobox.Controls.Add(label2);
-            Labour_infobox.Controls.Add(dateTimePicker2);
-            Labour_infobox.Controls.Add(dateTimePicker1);
-            Labour_infobox.Controls.Add(textBox9);
+            Labour_infobox.Controls.Add(outdaterenew);
+            Labour_infobox.Controls.Add(indate);
+            Labour_infobox.Controls.Add(contractorrenew);
             Labour_infobox.Controls.Add(label7);
-            Labour_infobox.Controls.Add(textBox5);
+            Labour_infobox.Controls.Add(gaterenew);
             Labour_infobox.Controls.Add(label5);
-            Labour_infobox.Controls.Add(textBox4);
+            Labour_infobox.Controls.Add(fullnamerenew);
             Labour_infobox.Controls.Add(label4);
-            Labour_infobox.Controls.Add(textBox1);
+            Labour_infobox.Controls.Add(labourrenew);
             Labour_infobox.Controls.Add(label1);
             Labour_infobox.Font = new Font("Times New Roman", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Labour_infobox.Location = new Point(257, 85);
@@ -370,15 +369,29 @@
             Labour_infobox.TabStop = false;
             Labour_infobox.Text = "Worker Information";
             // 
-            // textBox2
+            // arearenew
             // 
-            textBox2.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox2.Location = new Point(328, 627);
-            textBox2.Multiline = true;
-            textBox2.Name = "textBox2";
-            textBox2.PlaceholderText = "Enter Area Access";
-            textBox2.Size = new Size(158, 36);
-            textBox2.TabIndex = 31;
+            arearenew.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            arearenew.Location = new Point(328, 627);
+            arearenew.Multiline = true;
+            arearenew.Name = "arearenew";
+            arearenew.PlaceholderText = "Enter Area Access";
+            arearenew.Size = new Size(158, 36);
+            arearenew.TabIndex = 31;
+            arearenew.TextChanged += arearenew_TextChanged;
+            // 
+            // clearbtn
+            // 
+            clearbtn.BackColor = Color.WhiteSmoke;
+            clearbtn.Cursor = Cursors.Hand;
+            clearbtn.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            clearbtn.Location = new Point(197, 673);
+            clearbtn.Name = "clearbtn";
+            clearbtn.Size = new Size(127, 33);
+            clearbtn.TabIndex = 10;
+            clearbtn.Text = "Clear";
+            clearbtn.UseVisualStyleBackColor = false;
+            clearbtn.Click += clearbtn_Click;
             // 
             // label11
             // 
@@ -390,16 +403,42 @@
             label11.TabIndex = 30;
             label11.Text = "Area Access";
             // 
-            // dateTimePicker5
+            // savebtn
             // 
-            dateTimePicker5.CustomFormat = "dd-mm-yyyy";
-            dateTimePicker5.Font = new Font("Times New Roman", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dateTimePicker5.Format = DateTimePickerFormat.Short;
-            dateTimePicker5.Location = new Point(42, 629);
-            dateTimePicker5.Name = "dateTimePicker5";
-            dateTimePicker5.Size = new Size(157, 28);
-            dateTimePicker5.TabIndex = 29;
-            dateTimePicker5.Value = new DateTime(2025, 10, 3, 0, 0, 0, 0);
+            savebtn.BackColor = Color.FromArgb(0, 192, 0);
+            savebtn.Cursor = Cursors.Hand;
+            savebtn.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            savebtn.Location = new Point(349, 673);
+            savebtn.Name = "savebtn";
+            savebtn.Size = new Size(127, 33);
+            savebtn.TabIndex = 9;
+            savebtn.Text = "Save";
+            savebtn.UseVisualStyleBackColor = false;
+            savebtn.Click += savebtn_Click;
+            // 
+            // button1
+            // 
+            button1.BackColor = SystemColors.ControlDark;
+            button1.Cursor = Cursors.Hand;
+            button1.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button1.Location = new Point(42, 673);
+            button1.Name = "button1";
+            button1.Size = new Size(127, 33);
+            button1.TabIndex = 0;
+            button1.Text = "Back";
+            button1.UseVisualStyleBackColor = false;
+            // 
+            // dobrenew
+            // 
+            dobrenew.CustomFormat = "dd-mm-yyyy";
+            dobrenew.Font = new Font("Times New Roman", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dobrenew.Format = DateTimePickerFormat.Short;
+            dobrenew.Location = new Point(42, 629);
+            dobrenew.Name = "dobrenew";
+            dobrenew.Size = new Size(157, 28);
+            dobrenew.TabIndex = 29;
+            dobrenew.Value = new DateTime(2025, 10, 3, 0, 0, 0, 0);
+            dobrenew.ValueChanged += dobrenew_ValueChanged;
             // 
             // label6
             // 
@@ -415,39 +454,43 @@
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Times New Roman", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label8.Location = new Point(333, 409);
+            label8.Location = new Point(333, 401);
             label8.Name = "label8";
             label8.Size = new Size(130, 20);
             label8.TabIndex = 25;
             label8.Text = "Check-Out Time";
             // 
-            // dateTimePicker4
+            // outdatetime
             // 
-            dateTimePicker4.CustomFormat = "dd-mm-yyyy";
-            dateTimePicker4.Font = new Font("Times New Roman", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dateTimePicker4.Format = DateTimePickerFormat.Time;
-            dateTimePicker4.Location = new Point(333, 442);
-            dateTimePicker4.Name = "dateTimePicker4";
-            dateTimePicker4.Size = new Size(157, 28);
-            dateTimePicker4.TabIndex = 24;
-            dateTimePicker4.Value = new DateTime(2025, 10, 3, 0, 0, 0, 0);
+            outdatetime.CustomFormat = "00:00";
+            outdatetime.Font = new Font("Times New Roman", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            outdatetime.Format = DateTimePickerFormat.Time;
+            outdatetime.Location = new Point(333, 434);
+            outdatetime.Name = "outdatetime";
+            outdatetime.ShowUpDown = true;
+            outdatetime.Size = new Size(157, 28);
+            outdatetime.TabIndex = 24;
+            outdatetime.Value = new DateTime(2025, 10, 3, 0, 0, 0, 0);
+            outdatetime.ValueChanged += outdatetime_ValueChanged;
             // 
-            // dateTimePicker3
+            // entrytime
             // 
-            dateTimePicker3.CustomFormat = "dd-mm-yyyy";
-            dateTimePicker3.Font = new Font("Times New Roman", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dateTimePicker3.Format = DateTimePickerFormat.Time;
-            dateTimePicker3.Location = new Point(333, 350);
-            dateTimePicker3.Name = "dateTimePicker3";
-            dateTimePicker3.Size = new Size(157, 28);
-            dateTimePicker3.TabIndex = 23;
-            dateTimePicker3.Value = new DateTime(2025, 10, 3, 0, 0, 0, 0);
+            entrytime.CustomFormat = "00:00";
+            entrytime.Font = new Font("Times New Roman", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            entrytime.Format = DateTimePickerFormat.Time;
+            entrytime.Location = new Point(333, 342);
+            entrytime.Name = "entrytime";
+            entrytime.ShowUpDown = true;
+            entrytime.Size = new Size(157, 28);
+            entrytime.TabIndex = 23;
+            entrytime.Value = new DateTime(2025, 10, 3, 0, 0, 0, 0);
+            entrytime.ValueChanged += entrytime_ValueChanged;
             // 
             // label24
             // 
             label24.AutoSize = true;
             label24.Font = new Font("Times New Roman", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label24.Location = new Point(43, 155);
+            label24.Location = new Point(42, 138);
             label24.Name = "label24";
             label24.Size = new Size(86, 20);
             label24.TabIndex = 38;
@@ -457,7 +500,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Times New Roman", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(333, 317);
+            label3.Location = new Point(333, 309);
             label3.Name = "label3";
             label3.Size = new Size(91, 20);
             label3.TabIndex = 22;
@@ -467,83 +510,87 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Times New Roman", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(43, 409);
+            label2.Location = new Point(43, 401);
             label2.Name = "label2";
             label2.Size = new Size(75, 20);
             label2.TabIndex = 21;
             label2.Text = "Out Date";
             // 
-            // dateTimePicker2
+            // outdaterenew
             // 
-            dateTimePicker2.CustomFormat = "dd-mm-yyyy";
-            dateTimePicker2.Font = new Font("Times New Roman", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dateTimePicker2.Format = DateTimePickerFormat.Short;
-            dateTimePicker2.Location = new Point(43, 442);
-            dateTimePicker2.Name = "dateTimePicker2";
-            dateTimePicker2.Size = new Size(157, 28);
-            dateTimePicker2.TabIndex = 20;
-            dateTimePicker2.Value = new DateTime(2025, 10, 3, 0, 0, 0, 0);
+            outdaterenew.CustomFormat = "dd-mm-yyyy";
+            outdaterenew.Font = new Font("Times New Roman", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            outdaterenew.Format = DateTimePickerFormat.Short;
+            outdaterenew.Location = new Point(43, 434);
+            outdaterenew.Name = "outdaterenew";
+            outdaterenew.Size = new Size(157, 28);
+            outdaterenew.TabIndex = 20;
+            outdaterenew.Value = new DateTime(2025, 10, 3, 0, 0, 0, 0);
+            outdaterenew.ValueChanged += outdaterenew_ValueChanged;
             // 
-            // dateTimePicker1
+            // indate
             // 
-            dateTimePicker1.CustomFormat = "dd-mm-yyyy";
-            dateTimePicker1.Font = new Font("Times New Roman", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dateTimePicker1.Format = DateTimePickerFormat.Short;
-            dateTimePicker1.Location = new Point(43, 350);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(157, 28);
-            dateTimePicker1.TabIndex = 19;
-            dateTimePicker1.Value = new DateTime(2025, 10, 3, 0, 0, 0, 0);
+            indate.CustomFormat = "dd-mm-yyyy";
+            indate.Font = new Font("Times New Roman", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            indate.Format = DateTimePickerFormat.Short;
+            indate.Location = new Point(43, 342);
+            indate.Name = "indate";
+            indate.Size = new Size(157, 28);
+            indate.TabIndex = 19;
+            indate.Value = new DateTime(2025, 10, 3, 0, 0, 0, 0);
+            indate.ValueChanged += indate_ValueChanged;
             // 
-            // textBox9
+            // contractorrenew
             // 
-            textBox9.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox9.Location = new Point(43, 178);
-            textBox9.Multiline = true;
-            textBox9.Name = "textBox9";
-            textBox9.PlaceholderText = "Enter Contractor's Name";
-            textBox9.Size = new Size(250, 30);
-            textBox9.TabIndex = 18;
+            contractorrenew.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            contractorrenew.Location = new Point(42, 161);
+            contractorrenew.Multiline = true;
+            contractorrenew.Name = "contractorrenew";
+            contractorrenew.PlaceholderText = "Enter Contractor's Name";
+            contractorrenew.Size = new Size(250, 30);
+            contractorrenew.TabIndex = 18;
+            contractorrenew.TextChanged += contractorrenew_TextChanged;
             // 
             // label7
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Times New Roman", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label7.Location = new Point(43, 317);
+            label7.Location = new Point(43, 309);
             label7.Name = "label7";
             label7.Size = new Size(63, 20);
             label7.TabIndex = 13;
             label7.Text = "In Date";
             // 
-            // textBox5
+            // gaterenew
             // 
-            textBox5.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox5.Location = new Point(43, 259);
-            textBox5.Multiline = true;
-            textBox5.Name = "textBox5";
-            textBox5.PlaceholderText = "Enter Gate Names";
-            textBox5.Size = new Size(250, 36);
-            textBox5.TabIndex = 10;
+            gaterenew.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            gaterenew.Location = new Point(42, 243);
+            gaterenew.Multiline = true;
+            gaterenew.Name = "gaterenew";
+            gaterenew.PlaceholderText = "Enter Gate Names";
+            gaterenew.Size = new Size(250, 36);
+            gaterenew.TabIndex = 10;
             // 
             // label5
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Times New Roman", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label5.Location = new Point(43, 225);
+            label5.Location = new Point(42, 208);
             label5.Name = "label5";
             label5.Size = new Size(97, 20);
             label5.TabIndex = 9;
             label5.Text = "Gate Access";
             // 
-            // textBox4
+            // fullnamerenew
             // 
-            textBox4.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox4.Location = new Point(43, 532);
-            textBox4.Multiline = true;
-            textBox4.Name = "textBox4";
-            textBox4.PlaceholderText = "FullName";
-            textBox4.Size = new Size(447, 36);
-            textBox4.TabIndex = 8;
+            fullnamerenew.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            fullnamerenew.Location = new Point(43, 532);
+            fullnamerenew.Multiline = true;
+            fullnamerenew.Name = "fullnamerenew";
+            fullnamerenew.PlaceholderText = "FullName";
+            fullnamerenew.Size = new Size(447, 36);
+            fullnamerenew.TabIndex = 8;
+            fullnamerenew.TextChanged += fullnamerenew_TextChanged;
             // 
             // label4
             // 
@@ -555,15 +602,16 @@
             label4.TabIndex = 7;
             label4.Text = "Full Name";
             // 
-            // textBox1
+            // labourrenew
             // 
-            textBox1.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(43, 74);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.PlaceholderText = "Enter Labour Id";
-            textBox1.Size = new Size(250, 37);
-            textBox1.TabIndex = 2;
+            labourrenew.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            labourrenew.Location = new Point(43, 74);
+            labourrenew.Multiline = true;
+            labourrenew.Name = "labourrenew";
+            labourrenew.PlaceholderText = "Enter Labour Id";
+            labourrenew.Size = new Size(250, 29);
+            labourrenew.TabIndex = 2;
+            labourrenew.TextChanged += labourrenew_TextChanged;
             // 
             // label1
             // 
@@ -574,6 +622,19 @@
             label1.Size = new Size(81, 20);
             label1.TabIndex = 0;
             label1.Text = "Labour Id";
+            // 
+            // watchpreview
+            // 
+            watchpreview.BackColor = SystemColors.ActiveBorder;
+            watchpreview.Cursor = Cursors.Hand;
+            watchpreview.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            watchpreview.Location = new Point(877, 679);
+            watchpreview.Name = "watchpreview";
+            watchpreview.Size = new Size(316, 33);
+            watchpreview.TabIndex = 55;
+            watchpreview.Text = "Watch preview ";
+            watchpreview.UseVisualStyleBackColor = false;
+            watchpreview.Click += watchpreview_Click;
             // 
             // groupBox1
             // 
@@ -590,21 +651,23 @@
             // panel3
             // 
             panel3.BackColor = Color.WhiteSmoke;
-            panel3.Controls.Add(textBox17);
-            panel3.Controls.Add(textBox16);
+            panel3.Controls.Add(totimepasscial);
+            panel3.Controls.Add(textBox1);
+            panel3.Controls.Add(gatespass);
+            panel3.Controls.Add(areaspass);
             panel3.Controls.Add(label27);
             panel3.Controls.Add(label26);
             panel3.Controls.Add(textBox15);
             panel3.Controls.Add(label25);
             panel3.Controls.Add(label23);
-            panel3.Controls.Add(textBox14);
-            panel3.Controls.Add(textBox11);
+            panel3.Controls.Add(todaypass);
+            panel3.Controls.Add(fromdaypass);
             panel3.Controls.Add(textBox10);
             panel3.Controls.Add(textBox8);
             panel3.Controls.Add(label13);
-            panel3.Controls.Add(textBox7);
-            panel3.Controls.Add(textBox3);
-            panel3.Controls.Add(textBox6);
+            panel3.Controls.Add(dobpass);
+            panel3.Controls.Add(contractorpass);
+            panel3.Controls.Add(labouridpass);
             panel3.Controls.Add(label12);
             panel3.Controls.Add(label9);
             panel3.Controls.Add(namepass);
@@ -613,17 +676,134 @@
             panel3.Controls.Add(pictureBox14);
             panel3.Controls.Add(panel4);
             panel3.Controls.Add(pictureBox6);
-            panel3.Location = new Point(14, 26);
+            panel3.Location = new Point(21, 26);
             panel3.Name = "panel3";
-            panel3.Size = new Size(479, 562);
+            panel3.Size = new Size(472, 562);
             panel3.TabIndex = 0;
             panel3.Paint += panel3_Paint;
+            // 
+            // totimepasscial
+            // 
+            totimepasscial.BackColor = Color.WhiteSmoke;
+            totimepasscial.BorderStyle = BorderStyle.None;
+            totimepasscial.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            totimepasscial.Location = new Point(189, 442);
+            totimepasscial.Name = "totimepasscial";
+            totimepasscial.Size = new Size(58, 23);
+            totimepasscial.TabIndex = 69;
+            totimepasscial.TextChanged += totimepasscial_TextChanged;
+            // 
+            // textBox1
+            // 
+            textBox1.BackColor = Color.WhiteSmoke;
+            textBox1.BorderStyle = BorderStyle.None;
+            textBox1.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            textBox1.Location = new Point(189, 406);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(58, 23);
+            textBox1.TabIndex = 68;
+            textBox1.TextChanged += textBox1_TextChanged;
+            // 
+            // gatespass
+            // 
+            gatespass.BackColor = Color.WhiteSmoke;
+            gatespass.BorderStyle = BorderStyle.None;
+            gatespass.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            gatespass.Location = new Point(326, 439);
+            gatespass.Multiline = true;
+            gatespass.Name = "gatespass";
+            gatespass.Size = new Size(131, 27);
+            gatespass.TabIndex = 67;
+            gatespass.TextChanged += gatespass_TextChanged;
+            // 
+            // areaspass
+            // 
+            areaspass.BackColor = Color.WhiteSmoke;
+            areaspass.BorderStyle = BorderStyle.None;
+            areaspass.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            areaspass.Location = new Point(326, 399);
+            areaspass.Name = "areaspass";
+            areaspass.Size = new Size(131, 23);
+            areaspass.TabIndex = 66;
+            areaspass.TextChanged += areaspass_TextChanged;
+            // 
+            // label27
+            // 
+            label27.AutoSize = true;
+            label27.Location = new Point(271, 442);
+            label27.Name = "label27";
+            label27.Size = new Size(49, 20);
+            label27.TabIndex = 65;
+            label27.Text = "Gates:";
+            // 
+            // label26
+            // 
+            label26.AutoSize = true;
+            label26.Location = new Point(271, 406);
+            label26.Name = "label26";
+            label26.Size = new Size(49, 20);
+            label26.TabIndex = 64;
+            label26.Text = "Areas:";
+            // 
+            // textBox15
+            // 
+            textBox15.BackColor = Color.WhiteSmoke;
+            textBox15.BorderStyle = BorderStyle.None;
+            textBox15.Font = new Font("Times New Roman", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            textBox15.Location = new Point(-8, 373);
+            textBox15.Multiline = true;
+            textBox15.Name = "textBox15";
+            textBox15.Size = new Size(106, 27);
+            textBox15.TabIndex = 63;
+            textBox15.Text = "Validity";
+            textBox15.TextAlign = HorizontalAlignment.Center;
+            // 
+            // label25
+            // 
+            label25.AutoSize = true;
+            label25.Location = new Point(19, 445);
+            label25.Name = "label25";
+            label25.Size = new Size(28, 20);
+            label25.TabIndex = 62;
+            label25.Text = "To:";
+            // 
+            // label23
+            // 
+            label23.AutoSize = true;
+            label23.Location = new Point(17, 406);
+            label23.Name = "label23";
+            label23.Size = new Size(46, 20);
+            label23.TabIndex = 61;
+            label23.Text = "From:";
+            // 
+            // todaypass
+            // 
+            todaypass.BackColor = Color.WhiteSmoke;
+            todaypass.BorderStyle = BorderStyle.None;
+            todaypass.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            todaypass.Location = new Point(71, 442);
+            todaypass.Name = "todaypass";
+            todaypass.Size = new Size(108, 23);
+            todaypass.TabIndex = 60;
+            todaypass.TextChanged += todaypass_TextChanged;
+            // 
+            // fromdaypass
+            // 
+            fromdaypass.BackColor = Color.WhiteSmoke;
+            fromdaypass.BorderStyle = BorderStyle.None;
+            fromdaypass.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            fromdaypass.Location = new Point(70, 406);
+            fromdaypass.Name = "fromdaypass";
+            fromdaypass.Size = new Size(109, 23);
+            fromdaypass.TabIndex = 59;
+            fromdaypass.TextChanged += fromdaypass_TextChanged;
             // 
             // textBox10
             // 
             textBox10.BackColor = Color.WhiteSmoke;
-            textBox10.BorderStyle = BorderStyle.FixedSingle;
-            textBox10.Location = new Point(273, 362);
+            textBox10.BorderStyle = BorderStyle.None;
+            textBox10.Font = new Font("Times New Roman", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            textBox10.Location = new Point(271, 372);
             textBox10.Multiline = true;
             textBox10.Name = "textBox10";
             textBox10.Size = new Size(112, 27);
@@ -635,57 +815,63 @@
             // 
             textBox8.BackColor = Color.WhiteSmoke;
             textBox8.BorderStyle = BorderStyle.None;
-            textBox8.Font = new Font("Segoe UI Semibold", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            textBox8.Location = new Point(247, 230);
+            textBox8.Font = new Font("Arial", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBox8.Location = new Point(235, 264);
             textBox8.Name = "textBox8";
-            textBox8.Size = new Size(10, 36);
+            textBox8.Size = new Size(17, 32);
             textBox8.TabIndex = 57;
-            textBox8.Text = "|";
+            textBox8.Text = " |";
             // 
             // label13
             // 
             label13.AutoSize = true;
-            label13.Location = new Point(158, 274);
+            label13.Location = new Point(256, 273);
             label13.Name = "label13";
-            label13.Size = new Size(40, 20);
+            label13.Size = new Size(43, 20);
             label13.TabIndex = 56;
-            label13.Text = "DOB";
+            label13.Text = "DOB:";
             // 
-            // textBox7
+            // dobpass
             // 
-            textBox7.BackColor = Color.WhiteSmoke;
-            textBox7.BorderStyle = BorderStyle.FixedSingle;
-            textBox7.Location = new Point(206, 272);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(114, 27);
-            textBox7.TabIndex = 55;
+            dobpass.BackColor = Color.WhiteSmoke;
+            dobpass.BorderStyle = BorderStyle.None;
+            dobpass.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dobpass.Location = new Point(300, 275);
+            dobpass.Name = "dobpass";
+            dobpass.Size = new Size(157, 20);
+            dobpass.TabIndex = 55;
+            dobpass.TextAlign = HorizontalAlignment.Center;
+            dobpass.TextChanged += dobpass_TextChanged;
             // 
-            // textBox3
+            // contractorpass
             // 
-            textBox3.BackColor = Color.WhiteSmoke;
-            textBox3.BorderStyle = BorderStyle.FixedSingle;
-            textBox3.Location = new Point(109, 239);
-            textBox3.Multiline = true;
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(130, 27);
-            textBox3.TabIndex = 54;
-            textBox3.TextAlign = HorizontalAlignment.Center;
+            contractorpass.BackColor = Color.WhiteSmoke;
+            contractorpass.BorderStyle = BorderStyle.None;
+            contractorpass.Font = new Font("Times New Roman", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            contractorpass.Location = new Point(164, 304);
+            contractorpass.Multiline = true;
+            contractorpass.Name = "contractorpass";
+            contractorpass.Size = new Size(212, 27);
+            contractorpass.TabIndex = 54;
+            contractorpass.TextAlign = HorizontalAlignment.Center;
+            contractorpass.TextChanged += contractorpass_TextChanged;
             // 
-            // textBox6
+            // labouridpass
             // 
-            textBox6.BackColor = Color.WhiteSmoke;
-            textBox6.BorderStyle = BorderStyle.FixedSingle;
-            textBox6.Location = new Point(334, 238);
-            textBox6.Multiline = true;
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(123, 27);
-            textBox6.TabIndex = 53;
-            textBox6.TextAlign = HorizontalAlignment.Center;
+            labouridpass.BackColor = Color.WhiteSmoke;
+            labouridpass.BorderStyle = BorderStyle.FixedSingle;
+            labouridpass.Font = new Font("Times New Roman", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            labouridpass.Location = new Point(116, 271);
+            labouridpass.Name = "labouridpass";
+            labouridpass.Size = new Size(117, 27);
+            labouridpass.TabIndex = 53;
+            labouridpass.TextAlign = HorizontalAlignment.Center;
+            labouridpass.TextChanged += labouridpass_TextChanged;
             // 
             // label12
             // 
             label12.AutoSize = true;
-            label12.Location = new Point(258, 242);
+            label12.Location = new Point(38, 273);
             label12.Name = "label12";
             label12.Size = new Size(75, 20);
             label12.TabIndex = 52;
@@ -694,7 +880,7 @@
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(21, 243);
+            label9.Location = new Point(75, 307);
             label9.Name = "label9";
             label9.Size = new Size(82, 20);
             label9.TabIndex = 51;
@@ -703,22 +889,25 @@
             // namepass
             // 
             namepass.BackColor = Color.WhiteSmoke;
-            namepass.BorderStyle = BorderStyle.FixedSingle;
-            namepass.Font = new Font("Times New Roman", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            namepass.Location = new Point(142, 201);
-            namepass.Multiline = true;
+            namepass.BorderStyle = BorderStyle.None;
+            namepass.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            namepass.Location = new Point(78, 234);
             namepass.Name = "namepass";
-            namepass.Size = new Size(195, 29);
+            namepass.Size = new Size(348, 23);
             namepass.TabIndex = 49;
+            namepass.TextAlign = HorizontalAlignment.Center;
+            namepass.TextChanged += namepass_TextChanged;
             // 
             // photopass
             // 
-            photopass.Location = new Point(195, 87);
+            photopass.BorderStyle = BorderStyle.FixedSingle;
+            photopass.Location = new Point(189, 83);
             photopass.Name = "photopass";
-            photopass.Size = new Size(102, 108);
+            photopass.Size = new Size(124, 144);
             photopass.SizeMode = PictureBoxSizeMode.StretchImage;
             photopass.TabIndex = 48;
             photopass.TabStop = false;
+            photopass.Click += photopass_Click;
             // 
             // textBox13
             // 
@@ -734,9 +923,9 @@
             // pictureBox14
             // 
             pictureBox14.Image = (Image)resources.GetObject("pictureBox14.Image");
-            pictureBox14.Location = new Point(2, 88);
+            pictureBox14.Location = new Point(-1, 204);
             pictureBox14.Name = "pictureBox14";
-            pictureBox14.Size = new Size(29, 147);
+            pictureBox14.Size = new Size(32, 147);
             pictureBox14.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox14.TabIndex = 46;
             pictureBox14.TabStop = false;
@@ -754,7 +943,7 @@
             // 
             textBox12.BorderStyle = BorderStyle.None;
             textBox12.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            textBox12.Location = new Point(6, 30);
+            textBox12.Location = new Point(38, 27);
             textBox12.Multiline = true;
             textBox12.Name = "textBox12";
             textBox12.Size = new Size(288, 31);
@@ -795,42 +984,6 @@
             pictureBox2.TabIndex = 5;
             pictureBox2.TabStop = false;
             // 
-            // button1
-            // 
-            button1.BackColor = SystemColors.ControlDark;
-            button1.Cursor = Cursors.Hand;
-            button1.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button1.Location = new Point(827, 685);
-            button1.Name = "button1";
-            button1.Size = new Size(127, 33);
-            button1.TabIndex = 0;
-            button1.Text = "Back";
-            button1.UseVisualStyleBackColor = false;
-            // 
-            // button4
-            // 
-            button4.BackColor = Color.FromArgb(0, 192, 0);
-            button4.Cursor = Cursors.Hand;
-            button4.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button4.Location = new Point(1134, 685);
-            button4.Name = "button4";
-            button4.Size = new Size(127, 33);
-            button4.TabIndex = 9;
-            button4.Text = "Save";
-            button4.UseVisualStyleBackColor = false;
-            // 
-            // button5
-            // 
-            button5.BackColor = Color.WhiteSmoke;
-            button5.Cursor = Cursors.Hand;
-            button5.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button5.Location = new Point(982, 685);
-            button5.Name = "button5";
-            button5.Size = new Size(127, 33);
-            button5.TabIndex = 10;
-            button5.Text = "Clear";
-            button5.UseVisualStyleBackColor = false;
-            // 
             // pictureBox3
             // 
             pictureBox3.Cursor = Cursors.Hand;
@@ -840,6 +993,7 @@
             pictureBox3.Size = new Size(357, 95);
             pictureBox3.TabIndex = 0;
             pictureBox3.TabStop = false;
+            pictureBox3.Click += pictureBox3_Click;
             // 
             // label10
             // 
@@ -851,96 +1005,11 @@
             label10.Size = new Size(34, 38);
             label10.TabIndex = 54;
             label10.Text = "X";
-            label10.Click += label10_Click;
             // 
             // sqlCommand1
             // 
             sqlCommand1.CommandTimeout = 30;
             sqlCommand1.EnableOptimizedParameterBinding = false;
-            // 
-            // textBox11
-            // 
-            textBox11.BackColor = Color.WhiteSmoke;
-            textBox11.BorderStyle = BorderStyle.FixedSingle;
-            textBox11.Location = new Point(70, 406);
-            textBox11.Name = "textBox11";
-            textBox11.Size = new Size(169, 27);
-            textBox11.TabIndex = 59;
-            // 
-            // textBox14
-            // 
-            textBox14.BackColor = Color.WhiteSmoke;
-            textBox14.BorderStyle = BorderStyle.FixedSingle;
-            textBox14.Location = new Point(71, 443);
-            textBox14.Name = "textBox14";
-            textBox14.Size = new Size(169, 27);
-            textBox14.TabIndex = 60;
-            // 
-            // label23
-            // 
-            label23.AutoSize = true;
-            label23.Location = new Point(17, 406);
-            label23.Name = "label23";
-            label23.Size = new Size(46, 20);
-            label23.TabIndex = 61;
-            label23.Text = "From:";
-            // 
-            // label25
-            // 
-            label25.AutoSize = true;
-            label25.Location = new Point(17, 450);
-            label25.Name = "label25";
-            label25.Size = new Size(28, 20);
-            label25.TabIndex = 62;
-            label25.Text = "To:";
-            // 
-            // textBox15
-            // 
-            textBox15.BackColor = Color.WhiteSmoke;
-            textBox15.BorderStyle = BorderStyle.FixedSingle;
-            textBox15.Location = new Point(17, 367);
-            textBox15.Multiline = true;
-            textBox15.Name = "textBox15";
-            textBox15.Size = new Size(112, 27);
-            textBox15.TabIndex = 63;
-            textBox15.Text = "Validity";
-            textBox15.TextAlign = HorizontalAlignment.Center;
-            // 
-            // label26
-            // 
-            label26.AutoSize = true;
-            label26.Location = new Point(271, 406);
-            label26.Name = "label26";
-            label26.Size = new Size(49, 20);
-            label26.TabIndex = 64;
-            label26.Text = "Areas:";
-            // 
-            // label27
-            // 
-            label27.AutoSize = true;
-            label27.Location = new Point(271, 446);
-            label27.Name = "label27";
-            label27.Size = new Size(49, 20);
-            label27.TabIndex = 65;
-            label27.Text = "Gates:";
-            // 
-            // textBox16
-            // 
-            textBox16.BackColor = Color.WhiteSmoke;
-            textBox16.BorderStyle = BorderStyle.FixedSingle;
-            textBox16.Location = new Point(326, 399);
-            textBox16.Name = "textBox16";
-            textBox16.Size = new Size(131, 27);
-            textBox16.TabIndex = 66;
-            // 
-            // textBox17
-            // 
-            textBox17.BackColor = Color.WhiteSmoke;
-            textBox17.BorderStyle = BorderStyle.FixedSingle;
-            textBox17.Location = new Point(326, 446);
-            textBox17.Name = "textBox17";
-            textBox17.Size = new Size(131, 27);
-            textBox17.TabIndex = 67;
             // 
             // Form5
             // 
@@ -948,11 +1017,9 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
             ClientSize = new Size(1288, 833);
+            Controls.Add(watchpreview);
             Controls.Add(label10);
             Controls.Add(pictureBox3);
-            Controls.Add(button5);
-            Controls.Add(button4);
-            Controls.Add(button1);
             Controls.Add(groupBox1);
             Controls.Add(pictureBox2);
             Controls.Add(Labour_infobox);
@@ -962,7 +1029,6 @@
             Name = "Form5";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form5";
-            Load += Form5_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
@@ -990,30 +1056,65 @@
             PerformLayout();
         }
 
+        private void labourrenew_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void arearenew_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void dobrenew_ValueChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void outdatetime_ValueChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void entrytime_ValueChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void outdaterenew_ValueChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void indate_ValueChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void contractorrenew_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void fullnamerenew_TextChanged(object sender, EventArgs e)
+        {
+        }
+
         #endregion
 
         private PictureBox pictureBox1;
         private Panel panel1;
         private GroupBox Labour_infobox;
         private Label label7;
-        private TextBox textBox5;
+        private TextBox gaterenew;
         private Label label5;
-        private TextBox textBox4;
+        private TextBox fullnamerenew;
         private Label label4;
-        private DateTimePicker dateTimePicker1;
         private Label label3;
         private Label label2;
-        private DateTimePicker dateTimePicker2;
-        private DateTimePicker dateTimePicker5;
+        private DateTimePicker outdaterenew;
+        private DateTimePicker dobrenew;
         private Label label6;
         private Label label8;
-        private DateTimePicker dateTimePicker4;
-        private DateTimePicker dateTimePicker3;
+        private DateTimePicker outdatetime;
+        private DateTimePicker entrytime;
         private GroupBox groupBox1;
         private PictureBox pictureBox2;
         private Button button1;
-        private Button button4;
-        private Button button5;
+        private Button savebtn;
+        private Button clearbtn;
         private PictureBox pictureBox3;
         private Label label10;
         private PictureBox pictureBox13;
@@ -1032,12 +1133,12 @@
         private Label label17;
         private PictureBox pictureBox8;
         private PictureBox pictureBox11;
-        private TextBox textBox2;
+        private TextBox arearenew;
         private Label label11;
         private Panel panel3;
         private Panel panel2;
         private PictureBox pictureBox4;
-        private TextBox textBox1;
+        private TextBox labourrenew;
         private Label label1;
         private Microsoft.Data.SqlClient.SqlCommand sqlCommand1;
         private Label label24;
@@ -1048,23 +1149,29 @@
         private TextBox textBox13;
         private TextBox namepass;
         private PictureBox photopass;
-        private TextBox textBox9;
+        private TextBox contractorrenew;
         private Label label12;
         private Label label9;
-        private TextBox textBox6;
-        private TextBox textBox3;
+        private TextBox labouridpass;
+        private TextBox contractorpass;
         private TextBox textBox8;
         private Label label13;
-        private TextBox textBox7;
+        private TextBox dobpass;
         private TextBox textBox10;
         private Label label25;
         private Label label23;
-        private TextBox textBox14;
-        private TextBox textBox11;
-        private TextBox textBox17;
-        private TextBox textBox16;
+        private TextBox todaypass;
+        private TextBox gatespass;
+        private TextBox areaspass;
         private Label label27;
         private Label label26;
         private TextBox textBox15;
+        private Button watchpreview;
+        private DateTimePicker indate;
+        private TextBox fromdaypass;
+        private TextBox totimepasscial;
+        private TextBox textBox1;
+
+        public EventHandler gaterenew_TextChanged { get; private set; }
     }
 }

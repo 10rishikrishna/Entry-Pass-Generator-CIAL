@@ -1,0 +1,2 @@
+﻿ALTER TABLE LaborRenewal
+ADD CONSTRAINT PK_PermitNo PRIMARY KEY (PermitNo);
