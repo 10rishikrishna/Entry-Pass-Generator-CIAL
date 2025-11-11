@@ -1,4 +1,6 @@
-﻿namespace Entry_Pass_Generator_CIAL
+﻿using Microsoft.Data.SqlClient;
+
+namespace Entry_Pass_Generator_CIAL
 {
     partial class Form5
     {
@@ -35,18 +37,14 @@
             label16 = new Label();
             label22 = new Label();
             label14 = new Label();
-            label21 = new Label();
             label15 = new Label();
-            pictureBox12 = new PictureBox();
             pictureBox7 = new PictureBox();
             pictureBox9 = new PictureBox();
             label18 = new Label();
             label20 = new Label();
             pictureBox10 = new PictureBox();
             label19 = new Label();
-            label17 = new Label();
             pictureBox8 = new PictureBox();
-            pictureBox11 = new PictureBox();
             Labour_infobox = new GroupBox();
             arearenew = new TextBox();
             clearbtn = new Button();
@@ -105,16 +103,14 @@
             pictureBox2 = new PictureBox();
             pictureBox3 = new PictureBox();
             label10 = new Label();
-            sqlCommand1 = new Microsoft.Data.SqlClient.SqlCommand();
+            sqlCommand1 = new SqlCommand();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox13).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox12).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox10).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox11).BeginInit();
             Labour_infobox.SuspendLayout();
             groupBox1.SuspendLayout();
             panel3.SuspendLayout();
@@ -143,18 +139,14 @@
             panel1.Controls.Add(label16);
             panel1.Controls.Add(label22);
             panel1.Controls.Add(label14);
-            panel1.Controls.Add(label21);
             panel1.Controls.Add(label15);
-            panel1.Controls.Add(pictureBox12);
             panel1.Controls.Add(pictureBox7);
             panel1.Controls.Add(pictureBox9);
             panel1.Controls.Add(label18);
             panel1.Controls.Add(label20);
             panel1.Controls.Add(pictureBox10);
             panel1.Controls.Add(label19);
-            panel1.Controls.Add(label17);
             panel1.Controls.Add(pictureBox8);
-            panel1.Controls.Add(pictureBox11);
             panel1.Location = new Point(-1, 79);
             panel1.Name = "panel1";
             panel1.Size = new Size(240, 754);
@@ -175,11 +167,12 @@
             label16.AutoSize = true;
             label16.Cursor = Cursors.Hand;
             label16.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label16.Location = new Point(59, 277);
+            label16.Location = new Point(59, 215);
             label16.Name = "label16";
             label16.Size = new Size(145, 23);
             label16.TabIndex = 62;
             label16.Text = "Blacklist People";
+            label16.Click += label16_Click;
             // 
             // label22
             // 
@@ -204,17 +197,6 @@
             label14.Tag = "MAIN MENU";
             label14.Text = "MAIN MENU";
             // 
-            // label21
-            // 
-            label21.AutoSize = true;
-            label21.Cursor = Cursors.Hand;
-            label21.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label21.Location = new Point(55, 522);
-            label21.Name = "label21";
-            label21.Size = new Size(148, 23);
-            label21.TabIndex = 68;
-            label21.Text = "Rejected Passes";
-            // 
             // label15
             // 
             label15.AutoSize = true;
@@ -225,17 +207,7 @@
             label15.Size = new Size(180, 23);
             label15.TabIndex = 56;
             label15.Text = "Labour Registration";
-            // 
-            // pictureBox12
-            // 
-            pictureBox12.Cursor = Cursors.Hand;
-            pictureBox12.Image = (Image)resources.GetObject("pictureBox12.Image");
-            pictureBox12.Location = new Point(10, 510);
-            pictureBox12.Name = "pictureBox12";
-            pictureBox12.Size = new Size(44, 44);
-            pictureBox12.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox12.TabIndex = 67;
-            pictureBox12.TabStop = false;
+            label15.Click += label15_Click;
             // 
             // pictureBox7
             // 
@@ -280,6 +252,7 @@
             label20.Size = new Size(153, 23);
             label20.TabIndex = 65;
             label20.Text = "Approved Passes";
+            label20.Click += label20_Click;
             // 
             // pictureBox10
             // 
@@ -303,37 +276,16 @@
             label19.Tag = "MAIN MENU";
             label19.Text = "MANAGEMENT";
             // 
-            // label17
-            // 
-            label17.AutoSize = true;
-            label17.Cursor = Cursors.Hand;
-            label17.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label17.Location = new Point(59, 215);
-            label17.Name = "label17";
-            label17.Size = new Size(129, 23);
-            label17.TabIndex = 60;
-            label17.Text = "Search Passes";
-            // 
             // pictureBox8
             // 
             pictureBox8.Cursor = Cursors.Hand;
             pictureBox8.Image = (Image)resources.GetObject("pictureBox8.Image");
-            pictureBox8.Location = new Point(12, 265);
+            pictureBox8.Location = new Point(12, 203);
             pictureBox8.Name = "pictureBox8";
             pictureBox8.Size = new Size(40, 43);
             pictureBox8.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox8.TabIndex = 63;
             pictureBox8.TabStop = false;
-            // 
-            // pictureBox11
-            // 
-            pictureBox11.Image = (Image)resources.GetObject("pictureBox11.Image");
-            pictureBox11.Location = new Point(11, 202);
-            pictureBox11.Name = "pictureBox11";
-            pictureBox11.Size = new Size(44, 44);
-            pictureBox11.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox11.TabIndex = 61;
-            pictureBox11.TabStop = false;
             // 
             // Labour_infobox
             // 
@@ -427,6 +379,7 @@
             button1.TabIndex = 0;
             button1.Text = "Back";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // dobrenew
             // 
@@ -1033,12 +986,10 @@
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox13).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox12).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox9).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox10).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox11).EndInit();
             Labour_infobox.ResumeLayout(false);
             Labour_infobox.PerformLayout();
             groupBox1.ResumeLayout(false);
@@ -1058,7 +1009,65 @@
 
         private void labourrenew_TextChanged(object sender, EventArgs e)
         {
+            string aadhaarNumber = labourrenew.Text.Trim();
+
+            // Validate if the Aadhaar number is 12 digits and numeric
+            if (aadhaarNumber.Length == 12 && aadhaarNumber.All(char.IsDigit))
+            {
+                // Check if the entered Aadhaar number is blacklisted
+                CheckIfBlacklisted(aadhaarNumber);
+            }
+            else
+            {
+                // If the Aadhaar number is invalid, you can clear any previous alerts or messages
+                // Optional: Clear message or reset if necessary
+            }
         }
+            private void CheckIfBlacklisted(string aadhaarNumber)
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\RISHI\\Documents\\Eyegate.mdf;Integrated Security=True;Connect Timeout=30;Encrypt=True"))
+                {
+                    string query = @"SELECT BanReason 
+                             FROM BlacklistedAadhaar 
+                             WHERE AadhaarNumber = @AadhaarNumber";
+
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@AadhaarNumber", aadhaarNumber);
+                        conn.Open();
+
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                // If the person is blacklisted, show the reason
+                                string banReason = reader["BanReason"].ToString();
+
+                                // Show the message with the reason
+                                MessageBox.Show($"⚠️ BLACKLISTED PERSON ⚠️\n\n" +
+                                                $"Aadhaar Number: {aadhaarNumber}\n" +
+                                                $"Reason: {banReason}\n\n" +
+                                                "This person cannot be renewed or registered.",
+                                                "Blacklist Alert", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            }
+                            else
+                            {
+                                // If the person is not blacklisted, you can choose to do nothing or clear messages
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error checking blacklist: {ex.Message}",
+                                 "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        
 
         private void arearenew_TextChanged(object sender, EventArgs e)
         {
@@ -1121,18 +1130,14 @@
         private Label label16;
         private Label label22;
         private Label label14;
-        private Label label21;
         private Label label15;
-        private PictureBox pictureBox12;
         private PictureBox pictureBox7;
         private PictureBox pictureBox9;
         private Label label18;
         private Label label20;
         private PictureBox pictureBox10;
         private Label label19;
-        private Label label17;
         private PictureBox pictureBox8;
-        private PictureBox pictureBox11;
         private TextBox arearenew;
         private Label label11;
         private Panel panel3;

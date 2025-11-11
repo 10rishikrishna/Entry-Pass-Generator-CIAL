@@ -3,6 +3,7 @@ using System;
 using System;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.Globalization;
 using System.IO;
 using System.Text;
@@ -484,65 +485,143 @@ namespace Entry_Pass_Generator_CIAL
 
         private async void pictureBox3_Click(object sender, EventArgs e)
         {
-            var pass = new PassModel
-            {
-                LaborID = labouridpass.Text,
-                ContractorName = contractorpass.Text,
-                GateAccess = gatespass.Text,
-                EntryDate = DateTime.ParseExact(fromdaypass.Text, "dd-MM-yyyy", CultureInfo.InvariantCulture).ToString("yyyy-MM-dd"),
-
-                EntryTime = textBox1.Text,
-                ExitDate = DateTime.ParseExact(todaypass.Text, "dd-MM-yyyy", CultureInfo.InvariantCulture).ToString("yyyy-MM-dd"),
-
-                CheckoutTime = totimepasscial.Text,
-                FullName = fullnamerenew.Text,
-                Area = areaspass.Text,
-                DOB = DateTime.ParseExact(dobrenew.Text, "dd-MM-yyyy", CultureInfo.InvariantCulture).ToString("yyyy-MM-dd"),
-
-                LabourImageBase64 = ImageToBase64(photopass.Image)  // Helper function below
-            };
-
-            // Serialize the PassModel to JSON
-            string passJson = JsonSerializer.Serialize(pass);
-
-            // Send the JSON data asynchronously to the API
-            await SendPassDataAsync(passJson);
-
-            // Notify the user
-            MessageBox.Show("Pass data prepared and sent (or ready to send)!");
-        }
-
-        public async Task SendPassDataAsync(string jsonString)
-        {
-            var client = new HttpClient();
-
-            // Define the API URL (ensure this is correct)
-            string apiUrl = "http://localhost:5135/api/approve-pass";  // Update this with the correct API URL
-
-            var content = new StringContent(jsonString, Encoding.UTF8, "application/json");
-
             try
             {
-                var response = await client.PostAsync(apiUrl, content);
-
-                if (response.IsSuccessStatusCode)
+                // Create PassModel from your textbox values
+                var passModel = new PassModel
                 {
-                    Console.WriteLine("Pass sent successfully for approval.");
-                    MessageBox.Show("Pass sent successfully for approval.");
+                    LaborID = labouridpass.Text.Trim(),
+                    FullName = fullnamerenew.Text.Trim(),
+                    DOB = dobpass.Text.Trim(),
+                    ContractorName = contractorpass.Text.Trim(),
+                    Area = areaspass.Text.Trim(),
+                    GateAccess = gatespass.Text.Trim(),
+                    EntryDate = fromdaypass.Text.Trim(),
+                    ExitDate = todaypass.Text.Trim(),
+                    EntryTime = textBox1.Text.Trim(),
+                    CheckoutTime = totimepasscial.Text.Trim(),
+                    LabourImageBase64 = ConvertImageToBase64()
+                };
+
+                // Validate required fields
+                if (string.IsNullOrWhiteSpace(passModel.LaborID))
+                {
+                    MessageBox.Show("Labor ID is required!", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    labouridpass.Focus();
+                    return;
+                }
+
+                if (string.IsNullOrWhiteSpace(passModel.FullName))
+                {
+                    MessageBox.Show("Full Name is required!", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    fullnamerenew.Focus();
+                    return;
+                }
+
+                if (string.IsNullOrWhiteSpace(passModel.ContractorName))
+                {
+                    MessageBox.Show("Contractor Name is required!", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    contractorpass.Focus();
+                    return;
+                }
+
+                // Visual state feedback
+                pictureBox3.Enabled = false;
+                Cursor = Cursors.WaitCursor;
+
+                bool success = await PassSender.SendPassForApproval(passModel);
+
+                if (success)
+                {
+                    MessageBox.Show("Pass successfully sent for approval!", "Sent", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    // ClearForm(); // Uncomment if you want to clear input fields
                 }
                 else
                 {
-                    string errorMessage = await response.Content.ReadAsStringAsync();
-                    Console.WriteLine($"Failed to send pass for approval. Error: {errorMessage}");
-                    MessageBox.Show($"Failed to send pass for approval. Error: {errorMessage}");
+                    MessageBox.Show("Failed to send pass for approval. Please try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Exception occurred: {ex.Message}");
-                MessageBox.Show($"Exception occurred: {ex.Message}");
+                MessageBox.Show($"Unexpected error: {ex.Message}\n\nStack Trace:\n{ex.StackTrace}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                pictureBox3.Enabled = true;
+                Cursor = Cursors.Default;
             }
         }
 
+        // FIX: Create a clone of the image before saving to avoid GDI+ errors
+        private string ConvertImageToBase64()
+        {
+            if (photopass.Image != null)
+            {
+                try
+                {
+                    // Clone the image to avoid locking issues
+                    using (Bitmap clonedImage = new Bitmap(photopass.Image))
+                    using (MemoryStream ms = new MemoryStream())
+                    {
+                        clonedImage.Save(ms, ImageFormat.Jpeg);
+                        byte[] imageBytes = ms.ToArray();
+                        return Convert.ToBase64String(imageBytes);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    System.Diagnostics.Debug.WriteLine($"Error converting image to Base64: {ex.Message}");
+                    MessageBox.Show($"Error processing image: {ex.Message}", "Image Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return string.Empty;
+                }
+            }
+            return string.Empty;
+        }
+
+        private void ClearForm()
+        {
+            labouridpass.Clear();
+            fullnamerenew.Clear();
+            dobpass.Clear();
+            contractorpass.Clear();
+            areaspass.Clear();
+            gatespass.Clear();
+            fromdaypass.Clear();
+            todaypass.Clear();
+            textBox1.Clear();
+            totimepasscial.Clear();
+
+            // Dispose image before clearing
+            if (photopass.Image != null)
+            {
+                photopass.Image.Dispose();
+                photopass.Image = null;
+            }
+        }
+
+        private void label20_Click(object sender, EventArgs e)
+        {
+            Form9 f9 = new Form9();
+            f9.Show();
+            this.Hide();
+        }
+
+        private void label16_Click(object sender, EventArgs e)
+        {
+            Form7 form7 = new Form7();
+            form7.Show(); this.Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form4 form4 = new Form4();
+            form4.Show(); this.Hide();
+        }
+
+        private void label15_Click(object sender, EventArgs e)
+        {
+            Form4 form4 = new Form4();
+            form4.Show(); this.Hide();
+        }
     }
 }

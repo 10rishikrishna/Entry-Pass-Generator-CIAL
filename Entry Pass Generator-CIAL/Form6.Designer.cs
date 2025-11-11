@@ -31,18 +31,14 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form6));
             panel1 = new Panel();
             pictureBox13 = new PictureBox();
-            label17 = new Label();
             label16 = new Label();
-            pictureBox11 = new PictureBox();
             label22 = new Label();
             pictureBox8 = new PictureBox();
             label14 = new Label();
             label19 = new Label();
-            label21 = new Label();
             pictureBox10 = new PictureBox();
             label15 = new Label();
             label20 = new Label();
-            pictureBox12 = new PictureBox();
             label18 = new Label();
             pictureBox7 = new PictureBox();
             pictureBox9 = new PictureBox();
@@ -57,10 +53,8 @@
             label1 = new Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox13).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox11).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox10).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox12).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -74,18 +68,14 @@
             // 
             panel1.BackColor = SystemColors.ControlDarkDark;
             panel1.Controls.Add(pictureBox13);
-            panel1.Controls.Add(label17);
             panel1.Controls.Add(label16);
-            panel1.Controls.Add(pictureBox11);
             panel1.Controls.Add(label22);
             panel1.Controls.Add(pictureBox8);
             panel1.Controls.Add(label14);
             panel1.Controls.Add(label19);
-            panel1.Controls.Add(label21);
             panel1.Controls.Add(pictureBox10);
             panel1.Controls.Add(label15);
             panel1.Controls.Add(label20);
-            panel1.Controls.Add(pictureBox12);
             panel1.Controls.Add(label18);
             panel1.Controls.Add(pictureBox7);
             panel1.Controls.Add(pictureBox9);
@@ -105,40 +95,17 @@
             pictureBox13.TabIndex = 86;
             pictureBox13.TabStop = false;
             // 
-            // label17
-            // 
-            label17.AutoSize = true;
-            label17.Cursor = Cursors.Hand;
-            label17.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label17.Location = new Point(61, 214);
-            label17.Name = "label17";
-            label17.Size = new Size(129, 23);
-            label17.TabIndex = 76;
-            label17.Text = "Search Passes";
-            label17.Click += label17_Click;
-            // 
             // label16
             // 
             label16.AutoSize = true;
             label16.Cursor = Cursors.Hand;
             label16.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label16.Location = new Point(61, 276);
+            label16.Location = new Point(61, 218);
             label16.Name = "label16";
             label16.Size = new Size(145, 23);
             label16.TabIndex = 78;
             label16.Text = "Blacklist People";
             label16.Click += label16_Click_1;
-            // 
-            // pictureBox11
-            // 
-            pictureBox11.Image = (Image)resources.GetObject("pictureBox11.Image");
-            pictureBox11.Location = new Point(11, 201);
-            pictureBox11.Name = "pictureBox11";
-            pictureBox11.Size = new Size(44, 44);
-            pictureBox11.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox11.TabIndex = 77;
-            pictureBox11.TabStop = false;
-            pictureBox11.Click += pictureBox11_Click;
             // 
             // label22
             // 
@@ -155,7 +122,7 @@
             // pictureBox8
             // 
             pictureBox8.Image = (Image)resources.GetObject("pictureBox8.Image");
-            pictureBox8.Location = new Point(13, 264);
+            pictureBox8.Location = new Point(13, 206);
             pictureBox8.Name = "pictureBox8";
             pictureBox8.Size = new Size(40, 43);
             pictureBox8.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -186,17 +153,6 @@
             label19.TabIndex = 80;
             label19.Tag = "MAIN MENU";
             label19.Text = "MANAGEMENT";
-            // 
-            // label21
-            // 
-            label21.AutoSize = true;
-            label21.Cursor = Cursors.Hand;
-            label21.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label21.Location = new Point(57, 521);
-            label21.Name = "label21";
-            label21.Size = new Size(148, 23);
-            label21.TabIndex = 84;
-            label21.Text = "Rejected Passes";
             // 
             // pictureBox10
             // 
@@ -231,16 +187,6 @@
             label20.Size = new Size(153, 23);
             label20.TabIndex = 81;
             label20.Text = "Approved Passes";
-            // 
-            // pictureBox12
-            // 
-            pictureBox12.Image = (Image)resources.GetObject("pictureBox12.Image");
-            pictureBox12.Location = new Point(12, 509);
-            pictureBox12.Name = "pictureBox12";
-            pictureBox12.Size = new Size(44, 44);
-            pictureBox12.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox12.TabIndex = 83;
-            pictureBox12.TabStop = false;
             // 
             // label18
             // 
@@ -385,10 +331,8 @@
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox13).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox11).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox10).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox12).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox9).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
@@ -412,18 +356,14 @@
         private PictureBox pictureBox3;
         private TextBox textBox1;
         private PictureBox pictureBox13;
-        private Label label17;
         private Label label16;
-        private PictureBox pictureBox11;
         private Label label22;
         private PictureBox pictureBox8;
         private Label label14;
         private Label label19;
-        private Label label21;
         private PictureBox pictureBox10;
         private Label label15;
         private Label label20;
-        private PictureBox pictureBox12;
         private Label label18;
         private PictureBox pictureBox7;
         private PictureBox pictureBox9;

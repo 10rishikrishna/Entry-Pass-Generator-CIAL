@@ -1,5 +1,4 @@
-﻿
-namespace Entry_Pass_Generator_CIAL
+﻿namespace Entry_Pass_Generator_CIAL
 {
     partial class Form4
     {
@@ -34,15 +33,11 @@ namespace Entry_Pass_Generator_CIAL
             panel1 = new Panel();
             pictureBox13 = new PictureBox();
             label22 = new Label();
-            label21 = new Label();
-            pictureBox12 = new PictureBox();
             pictureBox9 = new PictureBox();
             label20 = new Label();
             label19 = new Label();
             pictureBox8 = new PictureBox();
             label16 = new Label();
-            pictureBox11 = new PictureBox();
-            label17 = new Label();
             pictureBox10 = new PictureBox();
             label18 = new Label();
             pictureBox7 = new PictureBox();
@@ -60,7 +55,7 @@ namespace Entry_Pass_Generator_CIAL
             label6 = new Label();
             aadhar = new TextBox();
             label5 = new Label();
-            statebox = new TextBox();
+            statebox = new ComboBox();
             label4 = new Label();
             fathermothername = new TextBox();
             label3 = new Label();
@@ -69,6 +64,8 @@ namespace Entry_Pass_Generator_CIAL
             labourid = new TextBox();
             label1 = new Label();
             Photos = new GroupBox();
+            button5 = new Button();
+            keepphoto = new Button();
             removeaadharimage = new Button();
             removefaceimage = new Button();
             label13 = new Label();
@@ -88,14 +85,11 @@ namespace Entry_Pass_Generator_CIAL
             button7 = new Button();
             panel2 = new Panel();
             label24 = new Label();
-            keepphoto = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox13).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox12).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox11).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox10).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -123,15 +117,11 @@ namespace Entry_Pass_Generator_CIAL
             panel1.BackColor = SystemColors.ControlDarkDark;
             panel1.Controls.Add(pictureBox13);
             panel1.Controls.Add(label22);
-            panel1.Controls.Add(label21);
-            panel1.Controls.Add(pictureBox12);
             panel1.Controls.Add(pictureBox9);
             panel1.Controls.Add(label20);
             panel1.Controls.Add(label19);
             panel1.Controls.Add(pictureBox8);
             panel1.Controls.Add(label16);
-            panel1.Controls.Add(pictureBox11);
-            panel1.Controls.Add(label17);
             panel1.Controls.Add(pictureBox10);
             panel1.Controls.Add(label18);
             panel1.Controls.Add(pictureBox7);
@@ -165,28 +155,6 @@ namespace Entry_Pass_Generator_CIAL
             label22.TabIndex = 36;
             label22.Text = "Logout";
             label22.Click += label22_Click;
-            // 
-            // label21
-            // 
-            label21.AutoSize = true;
-            label21.Cursor = Cursors.Hand;
-            label21.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label21.Location = new Point(58, 520);
-            label21.Name = "label21";
-            label21.Size = new Size(148, 23);
-            label21.TabIndex = 35;
-            label21.Text = "Rejected Passes";
-            // 
-            // pictureBox12
-            // 
-            pictureBox12.Cursor = Cursors.Hand;
-            pictureBox12.Image = (Image)resources.GetObject("pictureBox12.Image");
-            pictureBox12.Location = new Point(13, 508);
-            pictureBox12.Name = "pictureBox12";
-            pictureBox12.Size = new Size(44, 44);
-            pictureBox12.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox12.TabIndex = 34;
-            pictureBox12.TabStop = false;
             // 
             // pictureBox9
             // 
@@ -226,7 +194,7 @@ namespace Entry_Pass_Generator_CIAL
             // 
             pictureBox8.Cursor = Cursors.Hand;
             pictureBox8.Image = (Image)resources.GetObject("pictureBox8.Image");
-            pictureBox8.Location = new Point(14, 263);
+            pictureBox8.Location = new Point(14, 206);
             pictureBox8.Name = "pictureBox8";
             pictureBox8.Size = new Size(40, 43);
             pictureBox8.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -238,36 +206,12 @@ namespace Entry_Pass_Generator_CIAL
             label16.AutoSize = true;
             label16.Cursor = Cursors.Hand;
             label16.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label16.Location = new Point(62, 275);
+            label16.Location = new Point(62, 218);
             label16.Name = "label16";
             label16.Size = new Size(145, 23);
             label16.TabIndex = 29;
             label16.Text = "Blacklist People";
             label16.Click += label16_Click;
-            // 
-            // pictureBox11
-            // 
-            pictureBox11.Cursor = Cursors.Hand;
-            pictureBox11.Image = (Image)resources.GetObject("pictureBox11.Image");
-            pictureBox11.Location = new Point(12, 200);
-            pictureBox11.Name = "pictureBox11";
-            pictureBox11.Size = new Size(44, 44);
-            pictureBox11.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox11.TabIndex = 28;
-            pictureBox11.TabStop = false;
-            pictureBox11.Click += pictureBox11_Click;
-            // 
-            // label17
-            // 
-            label17.AutoSize = true;
-            label17.Cursor = Cursors.Hand;
-            label17.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label17.Location = new Point(62, 213);
-            label17.Name = "label17";
-            label17.Size = new Size(129, 23);
-            label17.TabIndex = 27;
-            label17.Text = "Search Passes";
-            label17.Click += label17_Click;
             // 
             // pictureBox10
             // 
@@ -365,6 +309,7 @@ namespace Entry_Pass_Generator_CIAL
             Labour_infobox.TabIndex = 3;
             Labour_infobox.TabStop = false;
             Labour_infobox.Text = "Basic Information";
+            Labour_infobox.Enter += Labour_infobox_Enter;
             // 
             // Contractorname
             // 
@@ -438,7 +383,8 @@ namespace Entry_Pass_Generator_CIAL
             Contactno.PlaceholderText = "Enter Contact Number";
             Contactno.Size = new Size(313, 36);
             Contactno.TabIndex = 12;
-            Contactno.TextChanged += textBox6_TextChanged;
+            Contactno.TextChanged += Contactno_TextChanged;
+            Contactno.KeyPress += Contactno_KeyPress;
             // 
             // label6
             // 
@@ -460,6 +406,7 @@ namespace Entry_Pass_Generator_CIAL
             aadhar.Size = new Size(284, 36);
             aadhar.TabIndex = 10;
             aadhar.TextChanged += aadhar_TextChanged;
+            aadhar.KeyPress += aadhar_KeyPress;
             // 
             // label5
             // 
@@ -473,14 +420,12 @@ namespace Entry_Pass_Generator_CIAL
             // 
             // statebox
             // 
+            statebox.DropDownStyle = ComboBoxStyle.DropDownList;
             statebox.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             statebox.Location = new Point(356, 284);
-            statebox.Multiline = true;
             statebox.Name = "statebox";
-            statebox.PlaceholderText = "Enter State";
-            statebox.Size = new Size(284, 36);
+            statebox.Size = new Size(284, 30);
             statebox.TabIndex = 8;
-            statebox.TextChanged += state_TextChanged;
             // 
             // label4
             // 
@@ -558,6 +503,7 @@ namespace Entry_Pass_Generator_CIAL
             // Photos
             // 
             Photos.BackColor = Color.White;
+            Photos.Controls.Add(button5);
             Photos.Controls.Add(keepphoto);
             Photos.Controls.Add(removeaadharimage);
             Photos.Controls.Add(removefaceimage);
@@ -580,6 +526,31 @@ namespace Entry_Pass_Generator_CIAL
             Photos.TabIndex = 4;
             Photos.TabStop = false;
             Photos.Text = "Documents ";
+            Photos.Enter += Photos_Enter;
+            // 
+            // button5
+            // 
+            button5.BackColor = Color.Lime;
+            button5.Font = new Font("Times New Roman", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button5.Location = new Point(836, 33);
+            button5.Name = "button5";
+            button5.Size = new Size(122, 30);
+            button5.TabIndex = 21;
+            button5.Text = "Keep Photo";
+            button5.UseVisualStyleBackColor = false;
+            button5.Click += button5_Click_1;
+            // 
+            // keepphoto
+            // 
+            keepphoto.BackColor = Color.Lime;
+            keepphoto.Font = new Font("Times New Roman", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            keepphoto.Location = new Point(344, 33);
+            keepphoto.Name = "keepphoto";
+            keepphoto.Size = new Size(122, 30);
+            keepphoto.TabIndex = 20;
+            keepphoto.Text = "Keep Photo";
+            keepphoto.UseVisualStyleBackColor = false;
+            keepphoto.Click += keepphoto_Click;
             // 
             // removeaadharimage
             // 
@@ -627,6 +598,7 @@ namespace Entry_Pass_Generator_CIAL
             button4.TabIndex = 17;
             button4.Text = "Start Camera";
             button4.UseVisualStyleBackColor = false;
+            button4.Click += button4_Click;
             // 
             // button3
             // 
@@ -794,18 +766,6 @@ namespace Entry_Pass_Generator_CIAL
             label24.Text = "X";
             label24.Click += label24_Click;
             // 
-            // keepphoto
-            // 
-            keepphoto.BackColor = Color.Lime;
-            keepphoto.Font = new Font("Times New Roman", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            keepphoto.Location = new Point(344, 33);
-            keepphoto.Name = "keepphoto";
-            keepphoto.Size = new Size(122, 30);
-            keepphoto.TabIndex = 20;
-            keepphoto.Text = "Keep Photo";
-            keepphoto.UseVisualStyleBackColor = false;
-            keepphoto.Click += keepphoto_Click;
-            // 
             // Form4
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -829,10 +789,8 @@ namespace Entry_Pass_Generator_CIAL
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox13).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox12).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox9).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox11).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox10).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
@@ -849,7 +807,13 @@ namespace Entry_Pass_Generator_CIAL
             ResumeLayout(false);
         }
 
-       
+      
+
+        private void Photos_Enter(object sender, EventArgs e)
+        {
+        }
+
+
 
         #endregion
 
@@ -859,7 +823,7 @@ namespace Entry_Pass_Generator_CIAL
         private GroupBox Labour_infobox;
         private Label label1;
         private TextBox labourid;
-        private TextBox statebox;
+        private ComboBox statebox;
         private Label label4;
         private TextBox fathermothername;
         private Label label3;
@@ -895,15 +859,11 @@ namespace Entry_Pass_Generator_CIAL
         private Label label14;
         private PictureBox pictureBox7;
         private Label label15;
-        private PictureBox pictureBox11;
-        private Label label17;
         private PictureBox pictureBox10;
         private Label label18;
         private Label label19;
         private PictureBox pictureBox8;
         private Label label16;
-        private Label label21;
-        private PictureBox pictureBox12;
         private PictureBox pictureBox9;
         private Label label20;
         private PictureBox pictureBox13;
@@ -912,5 +872,6 @@ namespace Entry_Pass_Generator_CIAL
         private Button removeaadharimage;
         private Button removefaceimage;
         private Button keepphoto;
+        private Button button5;
     }
 }
