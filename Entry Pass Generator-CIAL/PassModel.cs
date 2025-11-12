@@ -44,7 +44,6 @@ namespace Entry_Pass_Generator_CIAL
         [JsonPropertyName("submittedAt")]
         public DateTime SubmittedAt { get; set; } = DateTime.Now;
 
-        // FIX: Initialize with empty strings instead of null
         [JsonPropertyName("approvedBy")]
         public string ApprovedBy { get; set; } = "";
 
@@ -59,5 +58,35 @@ namespace Entry_Pass_Generator_CIAL
 
         [JsonPropertyName("downloadedAt")]
         public DateTime? DownloadedAt { get; set; }
+
+        [JsonPropertyName("digitalSignature")]
+        public DigitalSignatureData DigitalSignature { get; set; }
+    }
+
+    public class DigitalSignatureData
+    {
+        [JsonPropertyName("signatureId")]
+        public string SignatureId { get; set; }
+
+        [JsonPropertyName("signerName")]
+        public string SignerName { get; set; }
+
+        [JsonPropertyName("signerTitle")]
+        public string SignerTitle { get; set; }
+
+        [JsonPropertyName("signerOrganization")]
+        public string SignerOrganization { get; set; }
+
+        [JsonPropertyName("signedDate")]
+        public DateTime SignedDate { get; set; }
+
+        [JsonPropertyName("documentHash")]
+        public string DocumentHash { get; set; }
+
+        [JsonPropertyName("signatureValue")]
+        public string SignatureValue { get; set; }
+
+        [JsonPropertyName("publicKey")]
+        public string PublicKey { get; set; }
     }
 }

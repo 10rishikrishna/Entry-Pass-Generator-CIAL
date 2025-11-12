@@ -623,5 +623,11 @@ namespace Entry_Pass_Generator_CIAL
             Form4 form4 = new Form4();
             form4.Show(); this.Hide();
         }
+
+        private void label17_Click(object sender, EventArgs e)
+        {
+            Form8 form8 = new Form8();
+            form8.Show(); this.Hide();
+        }
     }
 }

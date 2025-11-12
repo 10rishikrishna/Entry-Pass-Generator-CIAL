@@ -58,6 +58,8 @@ namespace Entry_Pass_Generator_CIAL
             label2 = new Label();
             pictureBox2 = new PictureBox();
             label5 = new Label();
+            pictureBox11 = new PictureBox();
+            label17 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -72,6 +74,7 @@ namespace Entry_Pass_Generator_CIAL
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btnblacklist).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox11).BeginInit();
             SuspendLayout();
             // 
             // pictureBox4
@@ -143,7 +146,9 @@ namespace Entry_Pass_Generator_CIAL
             // panel1
             // 
             panel1.BackColor = SystemColors.ControlDarkDark;
+            panel1.Controls.Add(pictureBox11);
             panel1.Controls.Add(pictureBox13);
+            panel1.Controls.Add(label17);
             panel1.Controls.Add(label22);
             panel1.Controls.Add(label14);
             panel1.Controls.Add(label15);
@@ -379,6 +384,28 @@ namespace Entry_Pass_Generator_CIAL
             label5.Text = "X";
             label5.Click += label5_Click;
             // 
+            // pictureBox11
+            // 
+            pictureBox11.Cursor = Cursors.Hand;
+            pictureBox11.Image = (Image)resources.GetObject("pictureBox11.Image");
+            pictureBox11.Location = new Point(10, 274);
+            pictureBox11.Name = "pictureBox11";
+            pictureBox11.Size = new Size(44, 44);
+            pictureBox11.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox11.TabIndex = 73;
+            pictureBox11.TabStop = false;
+            // 
+            // label17
+            // 
+            label17.AutoSize = true;
+            label17.Cursor = Cursors.Hand;
+            label17.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label17.Location = new Point(60, 287);
+            label17.Name = "label17";
+            label17.Size = new Size(129, 23);
+            label17.TabIndex = 72;
+            label17.Text = "Search Passes";
+            // 
             // Form7
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -412,6 +439,7 @@ namespace Entry_Pass_Generator_CIAL
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             ((System.ComponentModel.ISupportInitialize)btnblacklist).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox11).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -459,5 +487,7 @@ namespace Entry_Pass_Generator_CIAL
         private PictureBox pictureBox8;
         private Label label16;
         private Label label5;
+        private PictureBox pictureBox11;
+        private Label label17;
     }
 }

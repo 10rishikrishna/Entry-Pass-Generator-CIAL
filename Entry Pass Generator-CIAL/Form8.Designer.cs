@@ -29,15 +29,11 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form8));
-            button5 = new Button();
-            button7 = new Button();
             pictureBox13 = new PictureBox();
             pictureBox11 = new PictureBox();
             label22 = new Label();
             label14 = new Label();
-            label21 = new Label();
             label15 = new Label();
-            pictureBox12 = new PictureBox();
             pictureBox7 = new PictureBox();
             pictureBox9 = new PictureBox();
             label20 = new Label();
@@ -55,39 +51,37 @@
             textBox1 = new TextBox();
             label1 = new Label();
             panel2 = new Panel();
-            picturesearch = new PictureBox();
-            label3 = new Label();
-            label4 = new Label();
-            label5 = new Label();
-            label6 = new Label();
-            sqlCommand1 = new Microsoft.Data.SqlClient.SqlCommand();
-            pictureBox15 = new PictureBox();
-            panel3 = new Panel();
-            panel6 = new Panel();
-            panel8 = new Panel();
-            panel5 = new Panel();
-            panel7 = new Panel();
-            label2 = new Label();
-            label10 = new Label();
-            label7 = new Label();
-            label8 = new Label();
-            label9 = new Label();
-            employeesearch = new TextBox();
-            contactsearch = new TextBox();
-            fnamesearch = new TextBox();
             lnamesearch = new TextBox();
-            contractorsearch = new TextBox();
-            fathernamesearch = new TextBox();
-            mothernamesearch = new TextBox();
-            statesearch = new TextBox();
-            addresssearch = new TextBox();
-            panel9 = new Panel();
-            pictureBox6 = new PictureBox();
-            label11 = new Label();
+            label7 = new Label();
             button1 = new Button();
+            aadharnosearch = new TextBox();
+            fnamesearch = new TextBox();
+            contactsearch = new TextBox();
+            employeesearch = new TextBox();
+            panel7 = new Panel();
+            addresssearch = new TextBox();
+            label9 = new Label();
+            picturesearch = new PictureBox();
+            panel8 = new Panel();
+            statesearch = new TextBox();
+            label8 = new Label();
+            panel6 = new Panel();
+            fathernamesearch = new TextBox();
+            label10 = new Label();
+            panel3 = new Panel();
+            contractorsearch = new TextBox();
+            label2 = new Label();
+            pictureBox15 = new PictureBox();
+            label6 = new Label();
+            label5 = new Label();
+            label4 = new Label();
+            label3 = new Label();
+            sqlCommand1 = new Microsoft.Data.SqlClient.SqlCommand();
+            panel9 = new Panel();
+            label11 = new Label();
+            pictureBox6 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox13).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox11).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox12).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox10).BeginInit();
@@ -98,40 +92,15 @@
             panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)picturesearch).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox15).BeginInit();
-            panel3.SuspendLayout();
-            panel6.SuspendLayout();
-            panel8.SuspendLayout();
-            panel5.SuspendLayout();
             panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)picturesearch).BeginInit();
+            panel8.SuspendLayout();
+            panel6.SuspendLayout();
+            panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox15).BeginInit();
             panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             SuspendLayout();
-            // 
-            // button5
-            // 
-            button5.BackColor = Color.WhiteSmoke;
-            button5.Cursor = Cursors.Hand;
-            button5.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button5.Location = new Point(293, 529);
-            button5.Name = "button5";
-            button5.Size = new Size(127, 33);
-            button5.TabIndex = 75;
-            button5.Text = "Clear";
-            button5.UseVisualStyleBackColor = false;
-            // 
-            // button7
-            // 
-            button7.BackColor = Color.Red;
-            button7.Cursor = Cursors.Hand;
-            button7.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button7.Location = new Point(26, 529);
-            button7.Name = "button7";
-            button7.Size = new Size(127, 33);
-            button7.TabIndex = 73;
-            button7.Text = "Delete";
-            button7.UseVisualStyleBackColor = false;
             // 
             // pictureBox13
             // 
@@ -147,7 +116,7 @@
             // 
             pictureBox11.Cursor = Cursors.Hand;
             pictureBox11.Image = (Image)resources.GetObject("pictureBox11.Image");
-            pictureBox11.Location = new Point(12, 212);
+            pictureBox11.Location = new Point(9, 265);
             pictureBox11.Name = "pictureBox11";
             pictureBox11.Size = new Size(44, 44);
             pictureBox11.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -164,6 +133,7 @@
             label22.Size = new Size(70, 23);
             label22.TabIndex = 79;
             label22.Text = "Logout";
+            label22.Click += label22_Click;
             // 
             // label14
             // 
@@ -177,17 +147,6 @@
             label14.Tag = "MAIN MENU";
             label14.Text = "MAIN MENU";
             // 
-            // label21
-            // 
-            label21.AutoSize = true;
-            label21.Cursor = Cursors.Hand;
-            label21.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label21.Location = new Point(55, 532);
-            label21.Name = "label21";
-            label21.Size = new Size(148, 23);
-            label21.TabIndex = 78;
-            label21.Text = "Rejected Passes";
-            // 
             // label15
             // 
             label15.AutoSize = true;
@@ -198,17 +157,7 @@
             label15.Size = new Size(180, 23);
             label15.TabIndex = 66;
             label15.Text = "Labour Registration";
-            // 
-            // pictureBox12
-            // 
-            pictureBox12.Cursor = Cursors.Hand;
-            pictureBox12.Image = (Image)resources.GetObject("pictureBox12.Image");
-            pictureBox12.Location = new Point(10, 520);
-            pictureBox12.Name = "pictureBox12";
-            pictureBox12.Size = new Size(44, 44);
-            pictureBox12.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox12.TabIndex = 77;
-            pictureBox12.TabStop = false;
+            label15.Click += label15_Click;
             // 
             // pictureBox7
             // 
@@ -242,6 +191,7 @@
             label20.Size = new Size(153, 23);
             label20.TabIndex = 75;
             label20.Text = "Approved Passes";
+            label20.Click += label20_Click;
             // 
             // pictureBox10
             // 
@@ -271,7 +221,7 @@
             label17.AutoSize = true;
             label17.Cursor = Cursors.Hand;
             label17.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label17.Location = new Point(62, 225);
+            label17.Location = new Point(59, 278);
             label17.Name = "label17";
             label17.Size = new Size(129, 23);
             label17.TabIndex = 70;
@@ -281,7 +231,7 @@
             // 
             pictureBox8.Cursor = Cursors.Hand;
             pictureBox8.Image = (Image)resources.GetObject("pictureBox8.Image");
-            pictureBox8.Location = new Point(14, 275);
+            pictureBox8.Location = new Point(16, 207);
             pictureBox8.Name = "pictureBox8";
             pictureBox8.Size = new Size(40, 43);
             pictureBox8.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -293,7 +243,7 @@
             label16.AutoSize = true;
             label16.Cursor = Cursors.Hand;
             label16.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label16.Location = new Point(62, 287);
+            label16.Location = new Point(59, 219);
             label16.Name = "label16";
             label16.Size = new Size(145, 23);
             label16.TabIndex = 72;
@@ -302,9 +252,9 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(-11, -29);
+            pictureBox1.Location = new Point(-11, -18);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(240, 92);
+            pictureBox1.Size = new Size(266, 92);
             pictureBox1.TabIndex = 69;
             pictureBox1.TabStop = false;
             // 
@@ -315,9 +265,7 @@
             panel1.Controls.Add(pictureBox11);
             panel1.Controls.Add(label22);
             panel1.Controls.Add(label14);
-            panel1.Controls.Add(label21);
             panel1.Controls.Add(label15);
-            panel1.Controls.Add(pictureBox12);
             panel1.Controls.Add(pictureBox7);
             panel1.Controls.Add(pictureBox9);
             panel1.Controls.Add(label18);
@@ -329,7 +277,7 @@
             panel1.Controls.Add(label16);
             panel1.Location = new Point(-1, 61);
             panel1.Name = "panel1";
-            panel1.Size = new Size(240, 754);
+            panel1.Size = new Size(232, 754);
             panel1.TabIndex = 68;
             // 
             // label18
@@ -342,6 +290,7 @@
             label18.Size = new Size(129, 23);
             label18.TabIndex = 68;
             label18.Text = "Renew Passes";
+            label18.Click += label18_Click;
             // 
             // pictureBox3
             // 
@@ -353,6 +302,7 @@
             pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox3.TabIndex = 0;
             pictureBox3.TabStop = false;
+            pictureBox3.Click += pictureBox3_Click;
             // 
             // panel4
             // 
@@ -363,7 +313,7 @@
             panel4.Controls.Add(label1);
             panel4.Location = new Point(281, 77);
             panel4.Name = "panel4";
-            panel4.Size = new Size(918, 113);
+            panel4.Size = new Size(970, 113);
             panel4.TabIndex = 70;
             // 
             // pictureBox4
@@ -384,10 +334,9 @@
             textBox1.Location = new Point(12, 45);
             textBox1.Multiline = true;
             textBox1.Name = "textBox1";
-            textBox1.PlaceholderText = " Enter Name";
+            textBox1.PlaceholderText = " Enter Aadhar";
             textBox1.Size = new Size(552, 50);
             textBox1.TabIndex = 1;
-            textBox1.TextChanged += textBox1_TextChanged;
             // 
             // label1
             // 
@@ -395,22 +344,21 @@
             label1.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.Location = new Point(12, 13);
             label1.Name = "label1";
-            label1.Size = new Size(264, 23);
+            label1.Size = new Size(276, 23);
             label1.TabIndex = 0;
-            label1.Text = "Enter the Name of the worker";
+            label1.Text = "Enter the Aadhar of the worker";
             // 
             // panel2
             // 
             panel2.BackColor = Color.White;
-            panel2.Controls.Add(button1);
             panel2.Controls.Add(lnamesearch);
+            panel2.Controls.Add(label7);
+            panel2.Controls.Add(button1);
+            panel2.Controls.Add(aadharnosearch);
             panel2.Controls.Add(fnamesearch);
             panel2.Controls.Add(contactsearch);
             panel2.Controls.Add(employeesearch);
             panel2.Controls.Add(panel7);
-            panel2.Controls.Add(button5);
-            panel2.Controls.Add(panel5);
-            panel2.Controls.Add(button7);
             panel2.Controls.Add(picturesearch);
             panel2.Controls.Add(panel8);
             panel2.Controls.Add(panel6);
@@ -422,246 +370,86 @@
             panel2.Controls.Add(label3);
             panel2.Location = new Point(281, 204);
             panel2.Name = "panel2";
-            panel2.Size = new Size(918, 583);
+            panel2.Size = new Size(970, 583);
             panel2.TabIndex = 3;
             // 
-            // picturesearch
+            // lnamesearch
             // 
-            picturesearch.Location = new Point(39, 39);
-            picturesearch.Name = "picturesearch";
-            picturesearch.Size = new Size(136, 137);
-            picturesearch.TabIndex = 0;
-            picturesearch.TabStop = false;
+            lnamesearch.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lnamesearch.Location = new Point(612, 84);
+            lnamesearch.Multiline = true;
+            lnamesearch.Name = "lnamesearch";
+            lnamesearch.Size = new Size(125, 74);
+            lnamesearch.TabIndex = 82;
             // 
-            // label3
+            // label7
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(197, 38);
-            label3.Name = "label3";
-            label3.Size = new Size(122, 19);
-            label3.TabIndex = 1;
-            label3.Text = "Employee Name";
+            label7.AutoSize = true;
+            label7.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label7.Location = new Point(627, 38);
+            label7.Name = "label7";
+            label7.Size = new Size(82, 19);
+            label7.TabIndex = 81;
+            label7.Text = "Last Name";
             // 
-            // label4
+            // button1
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.Location = new Point(380, 39);
-            label4.Name = "label4";
-            label4.Size = new Size(121, 19);
-            label4.TabIndex = 2;
-            label4.Text = "Contact Number";
+            button1.BackColor = Color.LimeGreen;
+            button1.Cursor = Cursors.Hand;
+            button1.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button1.Location = new Point(333, 516);
+            button1.Name = "button1";
+            button1.Size = new Size(293, 52);
+            button1.TabIndex = 80;
+            button1.Text = "View Adhaar Card";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
-            // label5
+            // aadharnosearch
             // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label5.Location = new Point(573, 39);
-            label5.Name = "label5";
-            label5.Size = new Size(85, 19);
-            label5.TabIndex = 3;
-            label5.Text = "First Name";
+            aadharnosearch.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            aadharnosearch.Location = new Point(752, 84);
+            aadharnosearch.Multiline = true;
+            aadharnosearch.Name = "aadharnosearch";
+            aadharnosearch.Size = new Size(179, 74);
+            aadharnosearch.TabIndex = 79;
             // 
-            // label6
+            // fnamesearch
             // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label6.Location = new Point(758, 37);
-            label6.Name = "label6";
-            label6.Size = new Size(82, 19);
-            label6.TabIndex = 4;
-            label6.Text = "Last Name";
+            fnamesearch.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            fnamesearch.Location = new Point(474, 84);
+            fnamesearch.Multiline = true;
+            fnamesearch.Name = "fnamesearch";
+            fnamesearch.Size = new Size(125, 74);
+            fnamesearch.TabIndex = 78;
             // 
-            // sqlCommand1
+            // contactsearch
             // 
-            sqlCommand1.CommandTimeout = 30;
-            sqlCommand1.EnableOptimizedParameterBinding = false;
+            contactsearch.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            contactsearch.Location = new Point(338, 84);
+            contactsearch.Multiline = true;
+            contactsearch.Name = "contactsearch";
+            contactsearch.Size = new Size(125, 74);
+            contactsearch.TabIndex = 77;
             // 
-            // pictureBox15
+            // employeesearch
             // 
-            pictureBox15.Image = (Image)resources.GetObject("pictureBox15.Image");
-            pictureBox15.Location = new Point(50, 170);
-            pictureBox15.Name = "pictureBox15";
-            pictureBox15.Size = new Size(830, 48);
-            pictureBox15.TabIndex = 5;
-            pictureBox15.TabStop = false;
-            // 
-            // panel3
-            // 
-            panel3.BackColor = Color.MistyRose;
-            panel3.Controls.Add(contractorsearch);
-            panel3.Controls.Add(label2);
-            panel3.Location = new Point(26, 256);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(202, 126);
-            panel3.TabIndex = 6;
-            // 
-            // panel6
-            // 
-            panel6.BackColor = Color.Lavender;
-            panel6.Controls.Add(fathernamesearch);
-            panel6.Controls.Add(label10);
-            panel6.Location = new Point(246, 256);
-            panel6.Name = "panel6";
-            panel6.Size = new Size(202, 126);
-            panel6.TabIndex = 7;
-            // 
-            // panel8
-            // 
-            panel8.BackColor = Color.Thistle;
-            panel8.Controls.Add(statesearch);
-            panel8.Controls.Add(label8);
-            panel8.Location = new Point(704, 256);
-            panel8.Name = "panel8";
-            panel8.Size = new Size(202, 126);
-            panel8.TabIndex = 8;
-            // 
-            // panel5
-            // 
-            panel5.BackColor = Color.Khaki;
-            panel5.Controls.Add(mothernamesearch);
-            panel5.Controls.Add(label7);
-            panel5.Location = new Point(467, 257);
-            panel5.Name = "panel5";
-            panel5.Size = new Size(222, 125);
-            panel5.TabIndex = 0;
+            employeesearch.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            employeesearch.Location = new Point(200, 84);
+            employeesearch.Multiline = true;
+            employeesearch.Name = "employeesearch";
+            employeesearch.Size = new Size(125, 74);
+            employeesearch.TabIndex = 76;
             // 
             // panel7
             // 
             panel7.BackColor = Color.LightGreen;
             panel7.Controls.Add(addresssearch);
             panel7.Controls.Add(label9);
-            panel7.Location = new Point(26, 408);
+            panel7.Location = new Point(27, 408);
             panel7.Name = "panel7";
-            panel7.Size = new Size(880, 97);
+            panel7.Size = new Size(916, 97);
             panel7.TabIndex = 7;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Times New Roman", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(13, 16);
-            label2.Name = "label2";
-            label2.Size = new Size(95, 20);
-            label2.TabIndex = 9;
-            label2.Text = "Contractor";
-            // 
-            // label10
-            // 
-            label10.AutoSize = true;
-            label10.Font = new Font("Times New Roman", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label10.Location = new Point(12, 16);
-            label10.Name = "label10";
-            label10.Size = new Size(121, 20);
-            label10.TabIndex = 10;
-            label10.Text = "Father's Name";
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Times New Roman", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label7.Location = new Point(13, 14);
-            label7.Name = "label7";
-            label7.Size = new Size(129, 20);
-            label7.TabIndex = 11;
-            label7.Text = "Mother's Name";
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Times New Roman", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label8.Location = new Point(16, 15);
-            label8.Name = "label8";
-            label8.Size = new Size(48, 20);
-            label8.TabIndex = 12;
-            label8.Text = "State";
-            // 
-            // label9
-            // 
-            label9.AutoSize = true;
-            label9.Font = new Font("Times New Roman", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label9.Location = new Point(19, 11);
-            label9.Name = "label9";
-            label9.Size = new Size(71, 20);
-            label9.TabIndex = 12;
-            label9.Text = "Address";
-            // 
-            // employeesearch
-            // 
-            employeesearch.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            employeesearch.Location = new Point(197, 78);
-            employeesearch.Multiline = true;
-            employeesearch.Name = "employeesearch";
-            employeesearch.Size = new Size(125, 74);
-            employeesearch.TabIndex = 76;
-            // 
-            // contactsearch
-            // 
-            contactsearch.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            contactsearch.Location = new Point(387, 78);
-            contactsearch.Multiline = true;
-            contactsearch.Name = "contactsearch";
-            contactsearch.Size = new Size(125, 74);
-            contactsearch.TabIndex = 77;
-            // 
-            // fnamesearch
-            // 
-            fnamesearch.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            fnamesearch.Location = new Point(564, 77);
-            fnamesearch.Multiline = true;
-            fnamesearch.Name = "fnamesearch";
-            fnamesearch.Size = new Size(125, 74);
-            fnamesearch.TabIndex = 78;
-            // 
-            // lnamesearch
-            // 
-            lnamesearch.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lnamesearch.Location = new Point(742, 75);
-            lnamesearch.Multiline = true;
-            lnamesearch.Name = "lnamesearch";
-            lnamesearch.Size = new Size(125, 74);
-            lnamesearch.TabIndex = 79;
-            // 
-            // contractorsearch
-            // 
-            contractorsearch.BackColor = Color.MistyRose;
-            contractorsearch.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            contractorsearch.Location = new Point(19, 49);
-            contractorsearch.Multiline = true;
-            contractorsearch.Name = "contractorsearch";
-            contractorsearch.Size = new Size(163, 56);
-            contractorsearch.TabIndex = 78;
-            // 
-            // fathernamesearch
-            // 
-            fathernamesearch.BackColor = Color.Lavender;
-            fathernamesearch.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            fathernamesearch.Location = new Point(12, 49);
-            fathernamesearch.Multiline = true;
-            fathernamesearch.Name = "fathernamesearch";
-            fathernamesearch.Size = new Size(163, 56);
-            fathernamesearch.TabIndex = 79;
-            // 
-            // mothernamesearch
-            // 
-            mothernamesearch.BackColor = Color.Khaki;
-            mothernamesearch.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            mothernamesearch.Location = new Point(13, 48);
-            mothernamesearch.Multiline = true;
-            mothernamesearch.Name = "mothernamesearch";
-            mothernamesearch.Size = new Size(191, 56);
-            mothernamesearch.TabIndex = 80;
-            // 
-            // statesearch
-            // 
-            statesearch.BackColor = Color.Thistle;
-            statesearch.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            statesearch.Location = new Point(6, 49);
-            statesearch.Multiline = true;
-            statesearch.Name = "statesearch";
-            statesearch.Size = new Size(191, 56);
-            statesearch.TabIndex = 81;
             // 
             // addresssearch
             // 
@@ -673,6 +461,169 @@
             addresssearch.Size = new Size(856, 44);
             addresssearch.TabIndex = 82;
             // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Font = new Font("Times New Roman", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label9.Location = new Point(19, 11);
+            label9.Name = "label9";
+            label9.Size = new Size(71, 20);
+            label9.TabIndex = 12;
+            label9.Text = "Address";
+            // 
+            // picturesearch
+            // 
+            picturesearch.BorderStyle = BorderStyle.FixedSingle;
+            picturesearch.Location = new Point(26, 38);
+            picturesearch.Name = "picturesearch";
+            picturesearch.Size = new Size(165, 161);
+            picturesearch.TabIndex = 0;
+            picturesearch.TabStop = false;
+            // 
+            // panel8
+            // 
+            panel8.BackColor = Color.Thistle;
+            panel8.Controls.Add(statesearch);
+            panel8.Controls.Add(label8);
+            panel8.Location = new Point(674, 256);
+            panel8.Name = "panel8";
+            panel8.Size = new Size(269, 126);
+            panel8.TabIndex = 8;
+            // 
+            // statesearch
+            // 
+            statesearch.BackColor = Color.Thistle;
+            statesearch.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            statesearch.Location = new Point(6, 49);
+            statesearch.Multiline = true;
+            statesearch.Name = "statesearch";
+            statesearch.Size = new Size(243, 56);
+            statesearch.TabIndex = 81;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Times New Roman", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label8.Location = new Point(10, 15);
+            label8.Name = "label8";
+            label8.Size = new Size(48, 20);
+            label8.TabIndex = 12;
+            label8.Text = "State";
+            // 
+            // panel6
+            // 
+            panel6.BackColor = Color.Lavender;
+            panel6.Controls.Add(fathernamesearch);
+            panel6.Controls.Add(label10);
+            panel6.Location = new Point(333, 256);
+            panel6.Name = "panel6";
+            panel6.Size = new Size(306, 126);
+            panel6.TabIndex = 7;
+            // 
+            // fathernamesearch
+            // 
+            fathernamesearch.BackColor = Color.Lavender;
+            fathernamesearch.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            fathernamesearch.Location = new Point(12, 49);
+            fathernamesearch.Multiline = true;
+            fathernamesearch.Name = "fathernamesearch";
+            fathernamesearch.Size = new Size(291, 56);
+            fathernamesearch.TabIndex = 79;
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Font = new Font("Times New Roman", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label10.Location = new Point(10, 16);
+            label10.Name = "label10";
+            label10.Size = new Size(122, 20);
+            label10.TabIndex = 10;
+            label10.Text = "Parent's Name";
+            // 
+            // panel3
+            // 
+            panel3.BackColor = Color.MistyRose;
+            panel3.Controls.Add(contractorsearch);
+            panel3.Controls.Add(label2);
+            panel3.Location = new Point(29, 256);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(277, 126);
+            panel3.TabIndex = 6;
+            // 
+            // contractorsearch
+            // 
+            contractorsearch.BackColor = Color.MistyRose;
+            contractorsearch.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            contractorsearch.Location = new Point(17, 49);
+            contractorsearch.Multiline = true;
+            contractorsearch.Name = "contractorsearch";
+            contractorsearch.Size = new Size(235, 56);
+            contractorsearch.TabIndex = 78;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Times New Roman", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Location = new Point(13, 16);
+            label2.Name = "label2";
+            label2.Size = new Size(95, 20);
+            label2.TabIndex = 9;
+            label2.Text = "Contractor";
+            // 
+            // pictureBox15
+            // 
+            pictureBox15.Image = (Image)resources.GetObject("pictureBox15.Image");
+            pictureBox15.Location = new Point(26, 205);
+            pictureBox15.Name = "pictureBox15";
+            pictureBox15.Size = new Size(905, 48);
+            pictureBox15.TabIndex = 5;
+            pictureBox15.TabStop = false;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label6.Location = new Point(760, 41);
+            label6.Name = "label6";
+            label6.Size = new Size(115, 19);
+            label6.TabIndex = 4;
+            label6.Text = "Aadhar Number";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label5.Location = new Point(483, 41);
+            label5.Name = "label5";
+            label5.Size = new Size(85, 19);
+            label5.TabIndex = 3;
+            label5.Text = "First Name";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label4.Location = new Point(333, 39);
+            label4.Name = "label4";
+            label4.Size = new Size(121, 19);
+            label4.TabIndex = 2;
+            label4.Text = "Contact Number";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.Location = new Point(205, 42);
+            label3.Name = "label3";
+            label3.Size = new Size(70, 19);
+            label3.TabIndex = 1;
+            label3.Text = "Labor ID";
+            // 
+            // sqlCommand1
+            // 
+            sqlCommand1.CommandTimeout = 30;
+            sqlCommand1.EnableOptimizedParameterBinding = false;
+            // 
             // panel9
             // 
             panel9.BackColor = Color.White;
@@ -680,39 +631,28 @@
             panel9.Controls.Add(pictureBox6);
             panel9.Location = new Point(231, 0);
             panel9.Name = "panel9";
-            panel9.Size = new Size(1061, 63);
+            panel9.Size = new Size(1061, 74);
             panel9.TabIndex = 80;
-            // 
-            // pictureBox6
-            // 
-            pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
-            pictureBox6.Location = new Point(30, 3);
-            pictureBox6.Name = "pictureBox6";
-            pictureBox6.Size = new Size(52, 57);
-            pictureBox6.TabIndex = 2;
-            pictureBox6.TabStop = false;
             // 
             // label11
             // 
             label11.AutoSize = true;
             label11.Font = new Font("Times New Roman", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label11.Location = new Point(96, 15);
+            label11.Location = new Point(97, 22);
             label11.Name = "label11";
-            label11.Size = new Size(411, 32);
+            label11.Size = new Size(548, 32);
             label11.TabIndex = 3;
-            label11.Text = "Search Information of Employees";
+            label11.Text = "Search Information of Temporary Employees";
             // 
-            // button1
+            // pictureBox6
             // 
-            button1.BackColor = Color.SlateGray;
-            button1.Cursor = Cursors.Hand;
-            button1.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button1.Location = new Point(662, 529);
-            button1.Name = "button1";
-            button1.Size = new Size(239, 42);
-            button1.TabIndex = 80;
-            button1.Text = "View Adhaar Card";
-            button1.UseVisualStyleBackColor = false;
+            pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
+            pictureBox6.Location = new Point(30, 7);
+            pictureBox6.Name = "pictureBox6";
+            pictureBox6.Size = new Size(60, 61);
+            pictureBox6.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox6.TabIndex = 2;
+            pictureBox6.TabStop = false;
             // 
             // Form8
             // 
@@ -726,10 +666,10 @@
             Controls.Add(panel4);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Form8";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Form8";
             ((System.ComponentModel.ISupportInitialize)pictureBox13).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox11).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox12).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox9).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox10).EndInit();
@@ -743,18 +683,16 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)picturesearch).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox15).EndInit();
-            panel3.ResumeLayout(false);
-            panel3.PerformLayout();
-            panel6.ResumeLayout(false);
-            panel6.PerformLayout();
-            panel8.ResumeLayout(false);
-            panel8.PerformLayout();
-            panel5.ResumeLayout(false);
-            panel5.PerformLayout();
             panel7.ResumeLayout(false);
             panel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)picturesearch).EndInit();
+            panel8.ResumeLayout(false);
+            panel8.PerformLayout();
+            panel6.ResumeLayout(false);
+            panel6.PerformLayout();
+            panel3.ResumeLayout(false);
+            panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox15).EndInit();
             panel9.ResumeLayout(false);
             panel9.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
@@ -762,16 +700,11 @@
         }
 
         #endregion
-
-        private Button button5;
-        private Button button7;
         private PictureBox pictureBox13;
         private PictureBox pictureBox11;
         private Label label22;
         private Label label14;
-        private Label label21;
         private Label label15;
-        private PictureBox pictureBox12;
         private PictureBox pictureBox7;
         private PictureBox pictureBox9;
         private Label label20;
@@ -800,24 +733,23 @@
         private Panel panel8;
         private Panel panel6;
         private Panel panel7;
-        private Panel panel5;
         private Label label2;
-        private TextBox lnamesearch;
+        private TextBox aadharnosearch;
         private TextBox fnamesearch;
         private TextBox contactsearch;
         private TextBox employeesearch;
         private Label label9;
-        private Label label7;
         private Label label8;
         private Label label10;
         private TextBox contractorsearch;
         private TextBox addresssearch;
-        private TextBox mothernamesearch;
         private TextBox statesearch;
         private TextBox fathernamesearch;
         private Panel panel9;
         private Label label11;
         private PictureBox pictureBox6;
         public Button button1;
+        private TextBox lnamesearch;
+        private Label label7;
     }
 }

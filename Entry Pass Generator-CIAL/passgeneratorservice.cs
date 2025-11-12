@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CIAL.Shared.DigitalSignature;
+using System;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
@@ -11,9 +12,6 @@ namespace Entry_Pass_Generator_CIAL
         private const int PassWidth = 468;
         private const int PassHeight = 564;
 
-        /// <summary>
-        /// Generates an approved pass with optional digital signature
-        /// </summary>
         public static string GenerateApprovedPass(PassModel passData, string approvalSignatureImagePath = null)
         {
             if (passData == null)
@@ -27,33 +25,28 @@ namespace Entry_Pass_Generator_CIAL
                 passBitmap = new Bitmap(PassWidth, PassHeight, PixelFormat.Format32bppArgb);
                 g = Graphics.FromImage(passBitmap);
 
-                // Set high quality rendering
                 g.SmoothingMode = SmoothingMode.AntiAlias;
                 g.InterpolationMode = InterpolationMode.HighQualityBicubic;
                 g.PixelOffsetMode = PixelOffsetMode.HighQuality;
                 g.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAlias;
 
-                // Clear background
                 g.Clear(Color.White);
 
-                // Draw all pass elements in order
                 DrawDottedBorder(g);
                 DrawUnderEscortBanner(g);
                 DrawHeader(g);
                 DrawEmployeePhoto(g, passData.LabourImageBase64);
                 DrawPersonDetails(g, passData);
                 DrawValidityAndAccessSection(g, passData);
-                DrawApprovalBadge(g);
+                DrawDigitalSignatureBadge(g, passData.DigitalSignature);
                 DrawFooter(g);
 
-                // IMPORTANT: Dispose graphics before saving
                 if (g != null)
                 {
                     g.Dispose();
                     g = null;
                 }
 
-                // Save and return path
                 string savedPath = SavePass(passBitmap, passData.LaborID);
                 return savedPath;
             }
@@ -89,7 +82,7 @@ namespace Entry_Pass_Generator_CIAL
             using (Font bannerFont = new Font("Arial", 11, FontStyle.Bold))
             using (SolidBrush whiteBrush = new SolidBrush(Color.White))
             {
-                g.FillRectangle(redBrush, 0, 208, 30, 150);
+                g.FillRectangle(redBrush, 0, 208, 30, 190);
 
                 GraphicsState state = g.Save();
                 g.TranslateTransform(15, 283);
@@ -147,7 +140,6 @@ namespace Entry_Pass_Generator_CIAL
                 {
                     byte[] imageBytes = Convert.FromBase64String(base64Image);
 
-                    // FIX: Direct stream initialization without duplicate write
                     using (MemoryStream ms = new MemoryStream(imageBytes))
                     {
                         using (Image tempImage = Image.FromStream(ms, true, false))
@@ -283,10 +275,10 @@ namespace Entry_Pass_Generator_CIAL
             }
         }
 
-        private static void DrawApprovalBadge(Graphics g)
+        private static void DrawDigitalSignatureBadge(Graphics g, DigitalSignatureData signature)
         {
-            int badgeX = 165;
-            int badgeY = 420;
+            int badgeX = 40;
+            int badgeY = 395;
             int circleSize = 40;
 
             using (SolidBrush greenBrush = new SolidBrush(Color.FromArgb(76, 175, 80)))
@@ -313,19 +305,33 @@ namespace Entry_Pass_Generator_CIAL
                 }
             }
 
-            using (Font approvedFont = new Font("Arial", 22, FontStyle.Bold))
+            using (Font approvedFont = new Font("Arial", 20, FontStyle.Bold))
             using (Font nameFont = new Font("Arial", 9, FontStyle.Bold))
-            using (Font detailFont = new Font("Arial", 8, FontStyle.Regular))
+            using (Font detailFont = new Font("Arial", 7.5f, FontStyle.Regular))
+            using (Font signatureIdFont = new Font("Arial", 7f, FontStyle.Bold))
             using (SolidBrush blackBrush = new SolidBrush(Color.Black))
             using (SolidBrush grayBrush = new SolidBrush(Color.FromArgb(102, 102, 102)))
+            using (SolidBrush blueBrush = new SolidBrush(Color.FromArgb(63, 81, 181)))
             {
-                int textX = badgeX + circleSize + 10;
-                int textStartY = badgeY;
+                int textX = badgeX + circleSize + 12;
+                int textStartY = badgeY - 5;
 
-                g.DrawString("APPROVED", approvedFont, blackBrush, textX, textStartY);
-                g.DrawString("Sindhu Santhosh", nameFont, grayBrush, textX, textStartY + 32);
-                g.DrawString("Assistant General Manager - Security", detailFont, grayBrush, textX, textStartY + 47);
-                g.DrawString("Cochin International Airport Limited", detailFont, grayBrush, textX, textStartY + 61);
+                g.DrawString("DIGITALLY SIGNED", approvedFont, blackBrush, textX, textStartY);
+
+                if (signature != null)
+                {
+                    g.DrawString(signature.SignerName ?? "N/A", nameFont, grayBrush, textX, textStartY + 28);
+                    g.DrawString(signature.SignerTitle ?? "", detailFont, grayBrush, textX, textStartY + 42);
+                    g.DrawString(signature.SignerOrganization ?? "", detailFont, grayBrush, textX, textStartY + 54);
+
+                    string dateTimeStr = signature.SignedDate.ToString("dd-MMM-yyyy HH:mm:ss");
+                    g.DrawString($"Date: {dateTimeStr}", detailFont, grayBrush, textX, textStartY + 66);
+                    g.DrawString($"Signature ID: {signature.SignatureId ?? "N/A"}", signatureIdFont, blueBrush, textX, textStartY + 78);
+                }
+                else
+                {
+                    g.DrawString("Awaiting Approval", detailFont, grayBrush, textX, textStartY + 28);
+                }
             }
         }
 
@@ -361,12 +367,10 @@ namespace Entry_Pass_Generator_CIAL
 
             try
             {
-                // FIX: Save directly without cloning to avoid GDI+ errors
                 passBitmap.Save(fullPath, ImageFormat.Png);
             }
             catch (Exception ex)
             {
-                // Fallback: Try saving through memory stream
                 try
                 {
                     using (MemoryStream ms = new MemoryStream())

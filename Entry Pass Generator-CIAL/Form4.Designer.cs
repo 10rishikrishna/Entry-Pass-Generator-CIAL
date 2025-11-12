@@ -31,7 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form4));
             pictureBox1 = new PictureBox();
             panel1 = new Panel();
+            pictureBox11 = new PictureBox();
             pictureBox13 = new PictureBox();
+            label17 = new Label();
             label22 = new Label();
             pictureBox9 = new PictureBox();
             label20 = new Label();
@@ -87,6 +89,7 @@
             label24 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox11).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox13).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
@@ -115,7 +118,9 @@
             // panel1
             // 
             panel1.BackColor = SystemColors.ControlDarkDark;
+            panel1.Controls.Add(pictureBox11);
             panel1.Controls.Add(pictureBox13);
+            panel1.Controls.Add(label17);
             panel1.Controls.Add(label22);
             panel1.Controls.Add(pictureBox9);
             panel1.Controls.Add(label20);
@@ -132,6 +137,17 @@
             panel1.Size = new Size(240, 754);
             panel1.TabIndex = 1;
             // 
+            // pictureBox11
+            // 
+            pictureBox11.Cursor = Cursors.Hand;
+            pictureBox11.Image = (Image)resources.GetObject("pictureBox11.Image");
+            pictureBox11.Location = new Point(12, 265);
+            pictureBox11.Name = "pictureBox11";
+            pictureBox11.Size = new Size(44, 44);
+            pictureBox11.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox11.TabIndex = 73;
+            pictureBox11.TabStop = false;
+            // 
             // pictureBox13
             // 
             pictureBox13.Cursor = Cursors.Hand;
@@ -143,6 +159,18 @@
             pictureBox13.TabIndex = 37;
             pictureBox13.TabStop = false;
             pictureBox13.Click += pictureBox13_Click;
+            // 
+            // label17
+            // 
+            label17.AutoSize = true;
+            label17.Cursor = Cursors.Hand;
+            label17.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label17.Location = new Point(62, 278);
+            label17.Name = "label17";
+            label17.Size = new Size(129, 23);
+            label17.TabIndex = 72;
+            label17.Text = "Search Passes";
+            label17.Click += label17_Click_1;
             // 
             // label22
             // 
@@ -788,6 +816,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox11).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox13).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox9).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
@@ -807,7 +836,7 @@
             ResumeLayout(false);
         }
 
-      
+
 
         private void Photos_Enter(object sender, EventArgs e)
         {
@@ -873,5 +902,7 @@
         private Button removefaceimage;
         private Button keepphoto;
         private Button button5;
+        private PictureBox pictureBox11;
+        private Label label17;
     }
 }

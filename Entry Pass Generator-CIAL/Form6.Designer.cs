@@ -51,6 +51,8 @@
             pictureBox3 = new PictureBox();
             textBox1 = new TextBox();
             label1 = new Label();
+            pictureBox11 = new PictureBox();
+            label17 = new Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox13).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
@@ -62,12 +64,15 @@
             panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox11).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackColor = SystemColors.ControlDarkDark;
+            panel1.Controls.Add(pictureBox11);
             panel1.Controls.Add(pictureBox13);
+            panel1.Controls.Add(label17);
             panel1.Controls.Add(label16);
             panel1.Controls.Add(label22);
             panel1.Controls.Add(pictureBox8);
@@ -313,6 +318,28 @@
             label1.TabIndex = 0;
             label1.Text = "Enter the LaborId Number of the worker";
             // 
+            // pictureBox11
+            // 
+            pictureBox11.Cursor = Cursors.Hand;
+            pictureBox11.Image = (Image)resources.GetObject("pictureBox11.Image");
+            pictureBox11.Location = new Point(11, 265);
+            pictureBox11.Name = "pictureBox11";
+            pictureBox11.Size = new Size(44, 44);
+            pictureBox11.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox11.TabIndex = 73;
+            pictureBox11.TabStop = false;
+            // 
+            // label17
+            // 
+            label17.AutoSize = true;
+            label17.Cursor = Cursors.Hand;
+            label17.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label17.Location = new Point(61, 278);
+            label17.Name = "label17";
+            label17.Size = new Size(129, 23);
+            label17.TabIndex = 72;
+            label17.Text = "Search Passes";
+            // 
             // Form6
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -341,6 +368,7 @@
             panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox11).EndInit();
             ResumeLayout(false);
         }
 
@@ -367,5 +395,7 @@
         private Label label18;
         private PictureBox pictureBox7;
         private PictureBox pictureBox9;
+        private PictureBox pictureBox11;
+        private Label label17;
     }
 }

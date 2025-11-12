@@ -10,26 +10,22 @@ namespace Entry_Pass_Generator_CIAL
     public static class PassSender
     {
         private static readonly HttpClient client = new HttpClient();
-
-        // Update this to match your ASP.NET middle layer API
         private const string API_BASE_URL = "http://localhost:5135";
-        private const string SEND_PASS_ENDPOINT = "/api/passes";  // Adjust to your actual endpoint
+        private const string SEND_PASS_ENDPOINT = "/api/passes";
 
         public static async Task<bool> SendPassForApproval(PassModel passModel)
         {
             try
             {
-                // Set Status to Pending before sending
                 passModel.Status = "Pending";
 
-                // Serialize PassModel to JSON
-                string json = JsonSerializer.Serialize(passModel, new JsonSerializerOptions
+                var json = JsonSerializer.Serialize(passModel, new JsonSerializerOptions
                 {
-                    PropertyNamingPolicy = JsonNamingPolicy.CamelCase, // Use camelCase for consistency
-                    WriteIndented = true
+                    PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
+                    WriteIndented = true,
+                    DefaultIgnoreCondition = System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull
                 });
 
-                // Debug output
                 System.Diagnostics.Debug.WriteLine($"[{DateTime.Now:HH:mm:ss}] Sending pass to API");
                 System.Diagnostics.Debug.WriteLine($"URL: {API_BASE_URL}{SEND_PASS_ENDPOINT}");
                 System.Diagnostics.Debug.WriteLine($"JSON Data: {json}");
@@ -76,26 +72,6 @@ namespace Entry_Pass_Generator_CIAL
                     MessageBoxIcon.Error);
 
                 System.Diagnostics.Debug.WriteLine($"HttpRequestException: {httpEx.Message}");
-                return false;
-            }
-            catch (TaskCanceledException)
-            {
-                MessageBox.Show(
-                    "Request timed out.\n\nThe API server is not responding.\nPlease check if the API is running.",
-                    "Timeout Error",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Warning);
-                return false;
-            }
-            catch (JsonException jsonEx)
-            {
-                MessageBox.Show(
-                    $"Error serializing pass data.\n\nDetails: {jsonEx.Message}",
-                    "JSON Error",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
-
-                System.Diagnostics.Debug.WriteLine($"JsonException: {jsonEx.Message}");
                 return false;
             }
             catch (Exception ex)

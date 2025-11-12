@@ -798,7 +798,7 @@ namespace Entry_Pass_Generator_CIAL
                 MessageBox.Show("No Aadhaar image to save!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
-        
+
         private void ProcessAadharFrame(object sender, EventArgs e)
         {
             if (capture != null && capture.Ptr != IntPtr.Zero)
@@ -982,6 +982,11 @@ namespace Entry_Pass_Generator_CIAL
             return new Point[] { topLeft, topRight, bottomRight, bottomLeft };
         }
 
-       
+        private void label17_Click_1(object sender, EventArgs e)
+        {
+            Form8 form8 = new Form8();
+            form8.Show();
+            this.Hide();
+        }
     }
 }
