@@ -7,6 +7,7 @@ using System.Text.Json.Serialization;
 namespace CIAL.Shared.DigitalSignature
 {
     /// <summary>
+
     /// Digital Signature Model - contains all signature information
     /// </summary>
     public class DigitalSignatureData
