@@ -140,19 +140,8 @@ namespace Entry_Pass_Generator_CIAL
             this.Hide();
         }
 
-        private void label17_Click(object sender, EventArgs e)
-        {
-            Form6 form6 = new Form6();
-            form6.Show();
-            this.Hide();
-        }
 
-        private void pictureBox11_Click(object sender, EventArgs e)
-        {
-            Form6 form6 = new Form6();
-            form6.Show();
-            this.Hide();
-        }
+
 
         private void label16_Click(object sender, EventArgs e)
         {
@@ -563,7 +552,6 @@ namespace Entry_Pass_Generator_CIAL
                 isCameraRunning = true;
                 button1.Text = "Stop Camera";
 
-                // Hide other buttons, show only removefaceimage and keepphoto
                 button2.Visible = false;
                 pictureBox5.Visible = false;
                 label10.Visible = false;
@@ -988,5 +976,13 @@ namespace Entry_Pass_Generator_CIAL
             form8.Show();
             this.Hide();
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Form3 form3 = new Form3();
+            form3.Show();
+            this.Hide();
+        }
+
     }
 }

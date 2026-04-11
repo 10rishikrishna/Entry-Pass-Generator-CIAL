@@ -44,19 +44,9 @@ namespace Entry_Pass_Generator_CIAL
             this.Hide();
         }
 
-        private void pictureBox11_Click(object sender, EventArgs e)
-        {
-            Form6 form6 = new Form6();
-            form6.Show();
-            this.Hide();
-        }
+        
 
-        private void label17_Click(object sender, EventArgs e)
-        {
-            Form6 form6 = new Form6();
-            form6.Show();
-            this.Hide();
-        }
+    
 
         private void label16_Click(object sender, EventArgs e)
         {

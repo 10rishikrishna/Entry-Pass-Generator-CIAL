@@ -33,20 +33,18 @@ namespace Entry_Pass_Generator_CIAL
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form5));
             pictureBox1 = new PictureBox();
             panel1 = new Panel();
+            label14 = new Label();
+            label19 = new Label();
             pictureBox11 = new PictureBox();
             pictureBox13 = new PictureBox();
             label17 = new Label();
-            label16 = new Label();
             label22 = new Label();
-            label14 = new Label();
             label15 = new Label();
             pictureBox7 = new PictureBox();
             pictureBox9 = new PictureBox();
             label18 = new Label();
             label20 = new Label();
             pictureBox10 = new PictureBox();
-            label19 = new Label();
-            pictureBox8 = new PictureBox();
             Labour_infobox = new GroupBox();
             arearenew = new TextBox();
             clearbtn = new Button();
@@ -113,7 +111,6 @@ namespace Entry_Pass_Generator_CIAL
             ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox10).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
             Labour_infobox.SuspendLayout();
             groupBox1.SuspendLayout();
             panel3.SuspendLayout();
@@ -138,30 +135,52 @@ namespace Entry_Pass_Generator_CIAL
             // panel1
             // 
             panel1.BackColor = SystemColors.ControlDarkDark;
+            panel1.Controls.Add(label14);
+            panel1.Controls.Add(label19);
             panel1.Controls.Add(pictureBox11);
             panel1.Controls.Add(pictureBox13);
             panel1.Controls.Add(label17);
-            panel1.Controls.Add(label16);
             panel1.Controls.Add(label22);
-            panel1.Controls.Add(label14);
             panel1.Controls.Add(label15);
             panel1.Controls.Add(pictureBox7);
             panel1.Controls.Add(pictureBox9);
             panel1.Controls.Add(label18);
             panel1.Controls.Add(label20);
             panel1.Controls.Add(pictureBox10);
-            panel1.Controls.Add(label19);
-            panel1.Controls.Add(pictureBox8);
             panel1.Location = new Point(-1, 79);
             panel1.Name = "panel1";
             panel1.Size = new Size(240, 754);
             panel1.TabIndex = 2;
             // 
+            // label14
+            // 
+            label14.AutoSize = true;
+            label14.Font = new Font("Tahoma", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label14.ForeColor = Color.White;
+            label14.Location = new Point(13, 39);
+            label14.Name = "label14";
+            label14.Size = new Size(155, 28);
+            label14.TabIndex = 75;
+            label14.Tag = "MAIN MENU";
+            label14.Text = "MAIN MENU";
+            // 
+            // label19
+            // 
+            label19.AutoSize = true;
+            label19.Font = new Font("Tahoma", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label19.ForeColor = Color.White;
+            label19.Location = new Point(11, 408);
+            label19.Name = "label19";
+            label19.Size = new Size(181, 28);
+            label19.TabIndex = 76;
+            label19.Tag = "MAIN MENU";
+            label19.Text = "MANAGEMENT";
+            // 
             // pictureBox11
             // 
             pictureBox11.Cursor = Cursors.Hand;
             pictureBox11.Image = (Image)resources.GetObject("pictureBox11.Image");
-            pictureBox11.Location = new Point(9, 266);
+            pictureBox11.Location = new Point(15, 197);
             pictureBox11.Name = "pictureBox11";
             pictureBox11.Size = new Size(44, 44);
             pictureBox11.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -171,7 +190,7 @@ namespace Entry_Pass_Generator_CIAL
             // pictureBox13
             // 
             pictureBox13.Image = (Image)resources.GetObject("pictureBox13.Image");
-            pictureBox13.Location = new Point(49, 672);
+            pictureBox13.Location = new Point(46, 682);
             pictureBox13.Name = "pictureBox13";
             pictureBox13.Size = new Size(44, 44);
             pictureBox13.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -183,54 +202,31 @@ namespace Entry_Pass_Generator_CIAL
             label17.AutoSize = true;
             label17.Cursor = Cursors.Hand;
             label17.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label17.Location = new Point(59, 279);
+            label17.Location = new Point(57, 208);
             label17.Name = "label17";
             label17.Size = new Size(129, 23);
             label17.TabIndex = 72;
             label17.Text = "Search Passes";
             label17.Click += label17_Click;
             // 
-            // label16
-            // 
-            label16.AutoSize = true;
-            label16.Cursor = Cursors.Hand;
-            label16.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label16.Location = new Point(59, 215);
-            label16.Name = "label16";
-            label16.Size = new Size(145, 23);
-            label16.TabIndex = 62;
-            label16.Text = "Blacklist People";
-            label16.Click += label16_Click;
-            // 
             // label22
             // 
             label22.AutoSize = true;
             label22.Cursor = Cursors.Hand;
             label22.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label22.Location = new Point(96, 683);
+            label22.Location = new Point(96, 694);
             label22.Name = "label22";
             label22.Size = new Size(70, 23);
             label22.TabIndex = 69;
             label22.Text = "Logout";
-            // 
-            // label14
-            // 
-            label14.AutoSize = true;
-            label14.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label14.ForeColor = SystemColors.ButtonFace;
-            label14.Location = new Point(9, 31);
-            label14.Name = "label14";
-            label14.Size = new Size(127, 23);
-            label14.TabIndex = 55;
-            label14.Tag = "MAIN MENU";
-            label14.Text = "MAIN MENU";
+            label22.Click += label22_Click;
             // 
             // label15
             // 
             label15.AutoSize = true;
             label15.Cursor = Cursors.Hand;
             label15.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label15.Location = new Point(54, 86);
+            label15.Location = new Point(57, 84);
             label15.Name = "label15";
             label15.Size = new Size(180, 23);
             label15.TabIndex = 56;
@@ -241,7 +237,7 @@ namespace Entry_Pass_Generator_CIAL
             // 
             pictureBox7.Cursor = Cursors.Hand;
             pictureBox7.Image = (Image)resources.GetObject("pictureBox7.Image");
-            pictureBox7.Location = new Point(11, 73);
+            pictureBox7.Location = new Point(11, 71);
             pictureBox7.Name = "pictureBox7";
             pictureBox7.Size = new Size(44, 44);
             pictureBox7.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -252,7 +248,7 @@ namespace Entry_Pass_Generator_CIAL
             // 
             pictureBox9.Cursor = Cursors.Hand;
             pictureBox9.Image = (Image)resources.GetObject("pictureBox9.Image");
-            pictureBox9.Location = new Point(11, 450);
+            pictureBox9.Location = new Point(13, 448);
             pictureBox9.Name = "pictureBox9";
             pictureBox9.Size = new Size(44, 44);
             pictureBox9.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -264,7 +260,7 @@ namespace Entry_Pass_Generator_CIAL
             label18.AutoSize = true;
             label18.Cursor = Cursors.Hand;
             label18.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label18.Location = new Point(59, 153);
+            label18.Location = new Point(57, 145);
             label18.Name = "label18";
             label18.Size = new Size(129, 23);
             label18.TabIndex = 58;
@@ -275,7 +271,7 @@ namespace Entry_Pass_Generator_CIAL
             label20.AutoSize = true;
             label20.Cursor = Cursors.Hand;
             label20.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label20.Location = new Point(54, 462);
+            label20.Location = new Point(57, 460);
             label20.Name = "label20";
             label20.Size = new Size(153, 23);
             label20.TabIndex = 65;
@@ -285,35 +281,12 @@ namespace Entry_Pass_Generator_CIAL
             // pictureBox10
             // 
             pictureBox10.Image = (Image)resources.GetObject("pictureBox10.Image");
-            pictureBox10.Location = new Point(14, 141);
+            pictureBox10.Location = new Point(15, 136);
             pictureBox10.Name = "pictureBox10";
             pictureBox10.Size = new Size(44, 44);
             pictureBox10.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox10.TabIndex = 59;
             pictureBox10.TabStop = false;
-            // 
-            // label19
-            // 
-            label19.AutoSize = true;
-            label19.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label19.ForeColor = SystemColors.ButtonFace;
-            label19.Location = new Point(9, 410);
-            label19.Name = "label19";
-            label19.Size = new Size(157, 23);
-            label19.TabIndex = 64;
-            label19.Tag = "MAIN MENU";
-            label19.Text = "MANAGEMENT";
-            // 
-            // pictureBox8
-            // 
-            pictureBox8.Cursor = Cursors.Hand;
-            pictureBox8.Image = (Image)resources.GetObject("pictureBox8.Image");
-            pictureBox8.Location = new Point(12, 203);
-            pictureBox8.Name = "pictureBox8";
-            pictureBox8.Size = new Size(40, 43);
-            pictureBox8.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox8.TabIndex = 63;
-            pictureBox8.TabStop = false;
             // 
             // Labour_infobox
             // 
@@ -351,12 +324,12 @@ namespace Entry_Pass_Generator_CIAL
             // 
             // arearenew
             // 
-            arearenew.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            arearenew.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             arearenew.Location = new Point(328, 627);
             arearenew.Multiline = true;
             arearenew.Name = "arearenew";
             arearenew.PlaceholderText = "Enter Area Access";
-            arearenew.Size = new Size(158, 36);
+            arearenew.Size = new Size(158, 45);
             arearenew.TabIndex = 31;
             arearenew.TextChanged += arearenew_TextChanged;
             // 
@@ -523,7 +496,7 @@ namespace Entry_Pass_Generator_CIAL
             // 
             // contractorrenew
             // 
-            contractorrenew.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            contractorrenew.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             contractorrenew.Location = new Point(42, 161);
             contractorrenew.Multiline = true;
             contractorrenew.Name = "contractorrenew";
@@ -544,7 +517,7 @@ namespace Entry_Pass_Generator_CIAL
             // 
             // gaterenew
             // 
-            gaterenew.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            gaterenew.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             gaterenew.Location = new Point(42, 243);
             gaterenew.Multiline = true;
             gaterenew.Name = "gaterenew";
@@ -564,7 +537,7 @@ namespace Entry_Pass_Generator_CIAL
             // 
             // fullnamerenew
             // 
-            fullnamerenew.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            fullnamerenew.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             fullnamerenew.Location = new Point(43, 532);
             fullnamerenew.Multiline = true;
             fullnamerenew.Name = "fullnamerenew";
@@ -585,7 +558,7 @@ namespace Entry_Pass_Generator_CIAL
             // 
             // labourrenew
             // 
-            labourrenew.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            labourrenew.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             labourrenew.Location = new Point(43, 74);
             labourrenew.Multiline = true;
             labourrenew.Name = "labourrenew";
@@ -690,10 +663,10 @@ namespace Entry_Pass_Generator_CIAL
             gatespass.BackColor = Color.WhiteSmoke;
             gatespass.BorderStyle = BorderStyle.None;
             gatespass.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            gatespass.Location = new Point(326, 439);
+            gatespass.Location = new Point(326, 440);
             gatespass.Multiline = true;
             gatespass.Name = "gatespass";
-            gatespass.Size = new Size(131, 27);
+            gatespass.Size = new Size(131, 66);
             gatespass.TabIndex = 67;
             gatespass.TextChanged += gatespass_TextChanged;
             // 
@@ -703,15 +676,16 @@ namespace Entry_Pass_Generator_CIAL
             areaspass.BorderStyle = BorderStyle.None;
             areaspass.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             areaspass.Location = new Point(326, 399);
+            areaspass.Multiline = true;
             areaspass.Name = "areaspass";
-            areaspass.Size = new Size(131, 23);
+            areaspass.Size = new Size(131, 37);
             areaspass.TabIndex = 66;
             areaspass.TextChanged += areaspass_TextChanged;
             // 
             // label27
             // 
             label27.AutoSize = true;
-            label27.Location = new Point(271, 442);
+            label27.Location = new Point(271, 443);
             label27.Name = "label27";
             label27.Size = new Size(49, 20);
             label27.TabIndex = 65;
@@ -764,7 +738,7 @@ namespace Entry_Pass_Generator_CIAL
             todaypass.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             todaypass.Location = new Point(71, 442);
             todaypass.Name = "todaypass";
-            todaypass.Size = new Size(108, 23);
+            todaypass.Size = new Size(149, 23);
             todaypass.TabIndex = 60;
             todaypass.TextChanged += todaypass_TextChanged;
             // 
@@ -775,7 +749,7 @@ namespace Entry_Pass_Generator_CIAL
             fromdaypass.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             fromdaypass.Location = new Point(70, 406);
             fromdaypass.Name = "fromdaypass";
-            fromdaypass.Size = new Size(109, 23);
+            fromdaypass.Size = new Size(150, 23);
             fromdaypass.TabIndex = 59;
             fromdaypass.TextChanged += fromdaypass_TextChanged;
             // 
@@ -832,7 +806,7 @@ namespace Entry_Pass_Generator_CIAL
             contractorpass.Location = new Point(164, 304);
             contractorpass.Multiline = true;
             contractorpass.Name = "contractorpass";
-            contractorpass.Size = new Size(212, 27);
+            contractorpass.Size = new Size(240, 62);
             contractorpass.TabIndex = 54;
             contractorpass.TextAlign = HorizontalAlignment.Center;
             contractorpass.TextChanged += contractorpass_TextChanged;
@@ -882,9 +856,9 @@ namespace Entry_Pass_Generator_CIAL
             // photopass
             // 
             photopass.BorderStyle = BorderStyle.FixedSingle;
-            photopass.Location = new Point(189, 83);
+            photopass.Location = new Point(164, 85);
             photopass.Name = "photopass";
-            photopass.Size = new Size(124, 144);
+            photopass.Size = new Size(149, 144);
             photopass.SizeMode = PictureBoxSizeMode.StretchImage;
             photopass.TabIndex = 48;
             photopass.TabStop = false;
@@ -971,7 +945,7 @@ namespace Entry_Pass_Generator_CIAL
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
             pictureBox3.Location = new Point(868, 719);
             pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(357, 95);
+            pictureBox3.Size = new Size(360, 102);
             pictureBox3.TabIndex = 0;
             pictureBox3.TabStop = false;
             pictureBox3.Click += pictureBox3_Click;
@@ -986,6 +960,7 @@ namespace Entry_Pass_Generator_CIAL
             label10.Size = new Size(34, 38);
             label10.TabIndex = 54;
             label10.Text = "X";
+            label10.Click += label10_Click;
             // 
             // sqlCommand1
             // 
@@ -1010,6 +985,7 @@ namespace Entry_Pass_Generator_CIAL
             Name = "Form5";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form5";
+            Load += Form5_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
@@ -1018,7 +994,6 @@ namespace Entry_Pass_Generator_CIAL
             ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox9).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox10).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
             Labour_infobox.ResumeLayout(false);
             Labour_infobox.PerformLayout();
             groupBox1.ResumeLayout(false);
@@ -1052,38 +1027,38 @@ namespace Entry_Pass_Generator_CIAL
                 // Optional: Clear message or reset if necessary
             }
         }
-            private void CheckIfBlacklisted(string aadhaarNumber)
+        private void CheckIfBlacklisted(string aadhaarNumber)
         {
             try
             {
                 using (SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\RISHI\\Documents\\Eyegate.mdf;Integrated Security=True;Connect Timeout=30;Encrypt=True"))
                 {
-                    string query = @"SELECT BanReason 
-                             FROM BlacklistedAadhaar 
-                             WHERE AadhaarNumber = @AadhaarNumber";
+                    string query = @"SELECT LaborID, FullName, Reason, BlacklistedBy, BlacklistedDate, ContactNumber
+                            FROM LaborBlacklist 
+                            WHERE AadharNumber = @AadharNumber";
 
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
-                        cmd.Parameters.AddWithValue("@AadhaarNumber", aadhaarNumber);
+                        cmd.Parameters.AddWithValue("@AadharNumber", aadhaarNumber);
                         conn.Open();
 
                         using (SqlDataReader reader = cmd.ExecuteReader())
                         {
                             if (reader.Read())
                             {
-                                // If the person is blacklisted, show the reason
-                                string banReason = reader["BanReason"].ToString();
+                                // Employee is blacklisted - show professional popup
+                                string laborID = reader["LaborID"]?.ToString() ?? "";
+                                string fullName = reader["FullName"]?.ToString() ?? "";
+                                string reason = reader["Reason"]?.ToString() ?? "";
+                                string blacklistedBy = reader["BlacklistedBy"]?.ToString() ?? "";
+                                DateTime blacklistedDate = reader["BlacklistedDate"] != DBNull.Value
+                                    ? Convert.ToDateTime(reader["BlacklistedDate"])
+                                    : DateTime.MinValue;
 
-                                // Show the message with the reason
-                                MessageBox.Show($"⚠️ BLACKLISTED PERSON ⚠️\n\n" +
-                                                $"Aadhaar Number: {aadhaarNumber}\n" +
-                                                $"Reason: {banReason}\n\n" +
-                                                "This person cannot be renewed or registered.",
-                                                "Blacklist Alert", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                            }
-                            else
-                            {
-                                // If the person is not blacklisted, you can choose to do nothing or clear messages
+                                ShowBlacklistWarning(laborID, fullName, aadhaarNumber, reason, blacklistedBy, blacklistedDate);
+
+                                // Clear the textbox
+                                labourrenew.Clear();
                             }
                         }
                     }
@@ -1096,7 +1071,133 @@ namespace Entry_Pass_Generator_CIAL
             }
         }
 
-        
+        // Add this method to Form5.cs
+        private void ShowBlacklistWarning(string laborID, string fullName, string aadhar,
+                                         string reason, string blacklistedBy, DateTime blacklistedDate)
+        {
+            Form warningForm = new Form
+            {
+                Text = "",
+                Size = new Size(600, 500),
+                StartPosition = FormStartPosition.CenterParent,
+                FormBorderStyle = FormBorderStyle.None,
+                BackColor = Color.FromArgb(41, 41, 41)
+            };
+
+            // Red header
+            Panel headerPanel = new Panel
+            {
+                Size = new Size(600, 100),
+                Location = new Point(0, 0),
+                BackColor = Color.FromArgb(192, 57, 43)
+            };
+
+            Label iconLabel = new Label
+            {
+                Text = "⛔",
+                Font = new Font("Segoe UI", 48, FontStyle.Bold),
+                Size = new Size(100, 90),
+                Location = new Point(10, 5),
+                ForeColor = Color.White,
+                TextAlign = ContentAlignment.MiddleCenter
+            };
+
+            Label titleLabel = new Label
+            {
+                Text = "BLACKLISTED EMPLOYEE",
+                Font = new Font("Segoe UI", 22, FontStyle.Bold),
+                Size = new Size(480, 40),
+                Location = new Point(110, 20),
+                ForeColor = Color.White
+            };
+
+            Label subtitleLabel = new Label
+            {
+                Text = "⚠️ PASS RENEWAL DENIED",
+                Font = new Font("Segoe UI", 12, FontStyle.Bold),
+                Size = new Size(480, 30),
+                Location = new Point(110, 60),
+                ForeColor = Color.FromArgb(255, 220, 220)
+            };
+
+            headerPanel.Controls.Add(iconLabel);
+            headerPanel.Controls.Add(titleLabel);
+            headerPanel.Controls.Add(subtitleLabel);
+
+            // Content panel
+            Panel contentPanel = new Panel
+            {
+                Size = new Size(560, 300),
+                Location = new Point(20, 120),
+                BackColor = Color.White
+            };
+
+            Label detailsLabel = new Label
+            {
+                Text = $"Labor ID: {laborID}\n" +
+                       $"Name: {fullName}\n" +
+                       $"Aadhar: {aadhar}\n\n" +
+                       $"Blacklisted By: {blacklistedBy}\n" +
+                       $"Date: {blacklistedDate:dd-MMM-yyyy HH:mm:ss}",
+                Font = new Font("Segoe UI", 11, FontStyle.Regular),
+                Size = new Size(520, 120),
+                Location = new Point(20, 20),
+                ForeColor = Color.FromArgb(44, 62, 80)
+            };
+
+            Label reasonHeaderLabel = new Label
+            {
+                Text = "REASON FOR BLACKLIST:",
+                Font = new Font("Segoe UI", 11, FontStyle.Bold),
+                Size = new Size(520, 25),
+                Location = new Point(20, 150),
+                ForeColor = Color.FromArgb(192, 57, 43)
+            };
+
+            TextBox reasonTextBox = new TextBox
+            {
+                Text = reason,
+                Font = new Font("Segoe UI", 10, FontStyle.Regular),
+                Size = new Size(520, 100),
+                Location = new Point(20, 180),
+                Multiline = true,
+                ReadOnly = true,
+                BackColor = Color.FromArgb(255, 235, 235),
+                ForeColor = Color.FromArgb(192, 57, 43),
+                BorderStyle = BorderStyle.FixedSingle,
+                ScrollBars = ScrollBars.Vertical
+            };
+
+            contentPanel.Controls.Add(detailsLabel);
+            contentPanel.Controls.Add(reasonHeaderLabel);
+            contentPanel.Controls.Add(reasonTextBox);
+
+            // Close button
+            System.Windows.Forms.Button closeButton = new System.Windows.Forms.Button
+            {
+                Text = "CLOSE",
+                Size = new Size(200, 45),
+                Location = new Point(200, 440),
+                BackColor = Color.FromArgb(52, 73, 94),
+                ForeColor = Color.White,
+                FlatStyle = FlatStyle.Flat,
+                Font = new Font("Segoe UI", 12, FontStyle.Bold),
+                Cursor = Cursors.Hand
+            };
+            closeButton.FlatAppearance.BorderSize = 0;
+            closeButton.Click += (s, args) => warningForm.Close();
+
+            warningForm.Controls.Add(headerPanel);
+            warningForm.Controls.Add(contentPanel);
+            warningForm.Controls.Add(closeButton);
+
+            // Sound alert
+            System.Media.SystemSounds.Hand.Play();
+
+            warningForm.ShowDialog(this);
+        }
+
+
 
         private void arearenew_TextChanged(object sender, EventArgs e)
         {
@@ -1156,17 +1257,9 @@ namespace Entry_Pass_Generator_CIAL
         private PictureBox pictureBox3;
         private Label label10;
         private PictureBox pictureBox13;
-        private Label label16;
         private Label label22;
-        private Label label14;
-        private Label label15;
-        private PictureBox pictureBox7;
         private PictureBox pictureBox9;
-        private Label label18;
         private Label label20;
-        private PictureBox pictureBox10;
-        private Label label19;
-        private PictureBox pictureBox8;
         private TextBox arearenew;
         private Label label11;
         private Panel panel3;
@@ -1207,6 +1300,12 @@ namespace Entry_Pass_Generator_CIAL
         private TextBox textBox1;
         private PictureBox pictureBox11;
         private Label label17;
+        private Label label15;
+        private PictureBox pictureBox7;
+        private Label label18;
+        private PictureBox pictureBox10;
+        private Label label14;
+        private Label label19;
 
         public EventHandler gaterenew_TextChanged { get; private set; }
     }

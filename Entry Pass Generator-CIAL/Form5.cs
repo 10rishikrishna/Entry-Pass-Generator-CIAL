@@ -233,20 +233,17 @@ namespace Entry_Pass_Generator_CIAL
                 MessageBox.Show("Please enter a Labour ID.", "Missing Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-
             if (string.IsNullOrEmpty(contractorName) || string.IsNullOrEmpty(gateAccess) || string.IsNullOrEmpty(fullName))
             {
                 MessageBox.Show("Please fill all the mandatory fields.", "Missing Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-
             // Ensure DateTimes are valid (not default values)
             if (entryDate == DateTime.MinValue || exitDate == DateTime.MinValue || dob == DateTime.MinValue)
             {
                 MessageBox.Show("Please select valid dates.", "Invalid Date", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-
             // Ensure Times are valid (not default times)
             if (entryTime == TimeSpan.Zero || checkoutTime == TimeSpan.Zero)
             {
@@ -254,33 +251,84 @@ namespace Entry_Pass_Generator_CIAL
                 return;
             }
 
-            // SQL Insert Query
-            string insertQuery = @"
-        INSERT INTO LaborRenewal (LaborID, ContractorName, GateAccess, FullName, Area, EntryDate, ExitDate, DOB, EntryTime, CheckoutTime)
-        VALUES (@LaborID, @ContractorName, @GateAccess, @FullName, @Area, @EntryDate, @ExitDate, @DOB, @EntryTime, @CheckoutTime)";
-
             try
             {
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
                     conn.Open();
-                    using (SqlCommand cmd = new SqlCommand(insertQuery, conn))
-                    {
-                        // Add parameters with values
-                        cmd.Parameters.AddWithValue("@LaborID", laborID);
-                        cmd.Parameters.AddWithValue("@ContractorName", contractorName);
-                        cmd.Parameters.AddWithValue("@GateAccess", gateAccess);
-                        cmd.Parameters.AddWithValue("@FullName", fullName);
-                        cmd.Parameters.AddWithValue("@Area", area);
-                        cmd.Parameters.AddWithValue("@EntryDate", entryDate);
-                        cmd.Parameters.AddWithValue("@ExitDate", exitDate);
-                        cmd.Parameters.AddWithValue("@DOB", dob);
-                        cmd.Parameters.AddWithValue("@EntryTime", entryTime);
-                        cmd.Parameters.AddWithValue("@CheckoutTime", checkoutTime);
 
-                        // Execute the query
-                        cmd.ExecuteNonQuery();
-                        MessageBox.Show("Data saved successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    // Check if a record exists for this LaborID with the same EntryDate
+                    string checkQuery = @"
+SELECT COUNT(*) 
+FROM LaborRenewal 
+WHERE LaborID = @LaborID 
+AND CAST(EntryDate AS DATE) = CAST(@EntryDate AS DATE)";
+
+                    int recordExists = 0;
+                    using (SqlCommand checkCmd = new SqlCommand(checkQuery, conn))
+                    {
+                        checkCmd.Parameters.AddWithValue("@LaborID", laborID);
+                        checkCmd.Parameters.AddWithValue("@EntryDate", entryDate);
+                        recordExists = (int)checkCmd.ExecuteScalar();
+                    }
+
+                    if (recordExists > 0)
+                    {
+                        // UPDATE existing record
+                        string updateQuery = @"
+UPDATE LaborRenewal 
+SET ContractorName = @ContractorName,
+    GateAccess = @GateAccess,
+    FullName = @FullName,
+    Area = @Area,
+    EntryDate = @EntryDate,
+    ExitDate = @ExitDate,
+    DOB = @DOB,
+    EntryTime = @EntryTime,
+    CheckoutTime = @CheckoutTime
+WHERE LaborID = @LaborID 
+AND CAST(EntryDate AS DATE) = CAST(@EntryDate AS DATE)";
+
+                        using (SqlCommand updateCmd = new SqlCommand(updateQuery, conn))
+                        {
+                            updateCmd.Parameters.AddWithValue("@LaborID", laborID);
+                            updateCmd.Parameters.AddWithValue("@ContractorName", contractorName);
+                            updateCmd.Parameters.AddWithValue("@GateAccess", gateAccess);
+                            updateCmd.Parameters.AddWithValue("@FullName", fullName);
+                            updateCmd.Parameters.AddWithValue("@Area", area);
+                            updateCmd.Parameters.AddWithValue("@EntryDate", entryDate);
+                            updateCmd.Parameters.AddWithValue("@ExitDate", exitDate);
+                            updateCmd.Parameters.AddWithValue("@DOB", dob);
+                            updateCmd.Parameters.AddWithValue("@EntryTime", entryTime);
+                            updateCmd.Parameters.AddWithValue("@CheckoutTime", checkoutTime);
+
+                            updateCmd.ExecuteNonQuery();
+                            MessageBox.Show("Data updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                    }
+                    else
+                    {
+                        // INSERT new record
+                        string insertQuery = @"
+INSERT INTO LaborRenewal (LaborID, ContractorName, GateAccess, FullName, Area, EntryDate, ExitDate, DOB, EntryTime, CheckoutTime)
+VALUES (@LaborID, @ContractorName, @GateAccess, @FullName, @Area, @EntryDate, @ExitDate, @DOB, @EntryTime, @CheckoutTime)";
+
+                        using (SqlCommand insertCmd = new SqlCommand(insertQuery, conn))
+                        {
+                            insertCmd.Parameters.AddWithValue("@LaborID", laborID);
+                            insertCmd.Parameters.AddWithValue("@ContractorName", contractorName);
+                            insertCmd.Parameters.AddWithValue("@GateAccess", gateAccess);
+                            insertCmd.Parameters.AddWithValue("@FullName", fullName);
+                            insertCmd.Parameters.AddWithValue("@Area", area);
+                            insertCmd.Parameters.AddWithValue("@EntryDate", entryDate);
+                            insertCmd.Parameters.AddWithValue("@ExitDate", exitDate);
+                            insertCmd.Parameters.AddWithValue("@DOB", dob);
+                            insertCmd.Parameters.AddWithValue("@EntryTime", entryTime);
+                            insertCmd.Parameters.AddWithValue("@CheckoutTime", checkoutTime);
+
+                            insertCmd.ExecuteNonQuery();
+                            MessageBox.Show("New record saved successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
                     }
                 }
             }
@@ -427,7 +475,7 @@ namespace Entry_Pass_Generator_CIAL
 
             using (MemoryStream ms = new MemoryStream())
             {
-                image.Save(ms, System.Drawing.Imaging.ImageFormat.Png); // or .Jpeg if preferred
+                image.Save(ms, System.Drawing.Imaging.ImageFormat.Png); 
                 byte[] imageBytes = ms.ToArray();
                 return Convert.ToBase64String(imageBytes);
             }
@@ -534,7 +582,6 @@ namespace Entry_Pass_Generator_CIAL
                 if (success)
                 {
                     MessageBox.Show("Pass successfully sent for approval!", "Sent", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    // ClearForm(); // Uncomment if you want to clear input fields
                 }
                 else
                 {
@@ -628,6 +675,22 @@ namespace Entry_Pass_Generator_CIAL
         {
             Form8 form8 = new Form8();
             form8.Show(); this.Hide();
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void Form5_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label22_Click(object sender, EventArgs e)
+        {
+            Form3 form3= new Form3();   
+            form3.Show(); this.Hide();  
         }
     }
 }

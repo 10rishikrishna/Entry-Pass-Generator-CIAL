@@ -33,8 +33,8 @@ namespace Entry_Pass_Generator_CIAL
                 g.Clear(Color.White);
 
                 DrawDottedBorder(g);
-                DrawUnderEscortBanner(g);
                 DrawHeader(g);
+                DrawUnderEscortBanner(g);
                 DrawEmployeePhoto(g, passData.LabourImageBase64);
                 DrawPersonDetails(g, passData);
                 DrawValidityAndAccessSection(g, passData);
@@ -76,36 +76,13 @@ namespace Entry_Pass_Generator_CIAL
             }
         }
 
-        private static void DrawUnderEscortBanner(Graphics g)
-        {
-            using (SolidBrush redBrush = new SolidBrush(Color.FromArgb(211, 47, 47)))
-            using (Font bannerFont = new Font("Arial", 11, FontStyle.Bold))
-            using (SolidBrush whiteBrush = new SolidBrush(Color.White))
-            {
-                g.FillRectangle(redBrush, 0, 208, 30, 190);
-
-                GraphicsState state = g.Save();
-                g.TranslateTransform(15, 283);
-                g.RotateTransform(-90);
-
-                StringFormat sf = new StringFormat
-                {
-                    Alignment = StringAlignment.Center,
-                    LineAlignment = StringAlignment.Center
-                };
-
-                g.DrawString("UNDER ESCORT", bannerFont, whiteBrush, 0, 0, sf);
-                g.Restore(state);
-            }
-        }
-
         private static void DrawHeader(Graphics g)
         {
-            using (Font headerFont = new Font("Arial", 13, FontStyle.Bold))
+            using (Font headerFont = new Font("Arial", 15, FontStyle.Bold))
             using (SolidBrush lightBannerBrush = new SolidBrush(Color.FromArgb(248, 248, 250)))
             using (SolidBrush blackBrush = new SolidBrush(Color.Black))
             {
-                int headerY = 15;
+                int headerY = 5;
                 int bannerHeight = 40;
 
                 g.FillRectangle(lightBannerBrush, 0, headerY, PassWidth, bannerHeight);
@@ -121,10 +98,38 @@ namespace Entry_Pass_Generator_CIAL
             }
         }
 
+        private static void DrawUnderEscortBanner(Graphics g)
+        {
+            using (SolidBrush redBrush = new SolidBrush(Color.FromArgb(211, 47, 47)))
+            using (Font bannerFont = new Font("Arial", 11, FontStyle.Bold))
+            using (SolidBrush whiteBrush = new SolidBrush(Color.White))
+            {
+                // Increased margin from top and bottom
+                int startY = 220;
+                int bannerHeight = 170;
+
+                g.FillRectangle(redBrush, 0, startY, 30, bannerHeight);
+
+                GraphicsState state = g.Save();
+                // Center the text in the banner
+                g.TranslateTransform(15, startY + (bannerHeight / 2));
+                g.RotateTransform(-90);
+
+                StringFormat sf = new StringFormat
+                {
+                    Alignment = StringAlignment.Center,
+                    LineAlignment = StringAlignment.Center
+                };
+
+                g.DrawString("UNDER ESCORT", bannerFont, whiteBrush, 0, 0, sf);
+                g.Restore(state);
+            }
+        }
+
         private static void DrawEmployeePhoto(Graphics g, string base64Image)
         {
             int photoX = 178;
-            int photoY = 60;
+            int photoY = 50;
             int photoWidth = 112;
             int photoHeight = 140;
 
@@ -205,13 +210,13 @@ namespace Entry_Pass_Generator_CIAL
                     LineAlignment = StringAlignment.Center
                 };
 
-                int nameY = 220;
+                int nameY = 210;
                 string fullName = passData.FullName ?? "N/A";
 
                 g.DrawString(fullName, nameFont, blackBrush,
                     new RectangleF(40, nameY, PassWidth - 80, 25), centerFormat);
 
-                int detailY1 = 248;
+                int detailY1 = 238;
                 string dobValue = passData.DOB ?? "N/A";
                 string labourValue = passData.LaborID ?? "N/A";
 
@@ -231,7 +236,7 @@ namespace Entry_Pass_Generator_CIAL
 
                 g.DrawString(" " + labourValue, valueFont, blackBrush, currentX, detailY1);
 
-                int detailY2 = 268;
+                int detailY2 = 258;
                 string contractorValue = passData.ContractorName ?? "N/A";
 
                 SizeF contractorLabelSize = g.MeasureString("Contractor: ", labelFont);
@@ -251,7 +256,7 @@ namespace Entry_Pass_Generator_CIAL
             using (Font valueFont = new Font("Arial", 9, FontStyle.Regular))
             using (SolidBrush blackBrush = new SolidBrush(Color.Black))
             {
-                int sectionY = 298;
+                int sectionY = 288;
                 int leftX = 50;
                 int rightX = 270;
 
@@ -277,16 +282,17 @@ namespace Entry_Pass_Generator_CIAL
 
         private static void DrawDigitalSignatureBadge(Graphics g, DigitalSignatureData signature)
         {
-            int badgeX = 40;
-            int badgeY = 395;
-            int circleSize = 40;
+            int badgeX = 50;
+            int badgeY = 390;
+            int circleSize = 60;
+            int circleOffsetY = 5; // Offset to move circle down separately
 
             using (SolidBrush greenBrush = new SolidBrush(Color.FromArgb(76, 175, 80)))
             {
-                g.FillEllipse(greenBrush, badgeX, badgeY, circleSize, circleSize);
+                g.FillEllipse(greenBrush, badgeX, badgeY + circleOffsetY, circleSize, circleSize);
             }
 
-            using (Pen checkPen = new Pen(Color.White, 3.5f))
+            using (Pen checkPen = new Pen(Color.White, 5.5f))
             {
                 checkPen.StartCap = LineCap.Round;
                 checkPen.EndCap = LineCap.Round;
@@ -294,9 +300,9 @@ namespace Entry_Pass_Generator_CIAL
 
                 using (GraphicsPath checkPath = new GraphicsPath())
                 {
-                    PointF p1 = new PointF(badgeX + 12, badgeY + 20);
-                    PointF p2 = new PointF(badgeX + 18, badgeY + 26);
-                    PointF p3 = new PointF(badgeX + 29, badgeY + 14);
+                    PointF p1 = new PointF(badgeX + 18, badgeY + circleOffsetY + 33);
+                    PointF p2 = new PointF(badgeX + 26, badgeY + circleOffsetY + 42);
+                    PointF p3 = new PointF(badgeX + 43, badgeY + circleOffsetY + 23);
 
                     checkPath.AddLine(p1, p2);
                     checkPath.AddLine(p2, p3);
@@ -305,7 +311,7 @@ namespace Entry_Pass_Generator_CIAL
                 }
             }
 
-            using (Font approvedFont = new Font("Arial", 20, FontStyle.Bold))
+            using (Font approvedFont = new Font("Arial Narrow", 18, FontStyle.Bold))
             using (Font nameFont = new Font("Arial", 9, FontStyle.Bold))
             using (Font detailFont = new Font("Arial", 7.5f, FontStyle.Regular))
             using (Font signatureIdFont = new Font("Arial", 7f, FontStyle.Bold))
@@ -314,23 +320,24 @@ namespace Entry_Pass_Generator_CIAL
             using (SolidBrush blueBrush = new SolidBrush(Color.FromArgb(63, 81, 181)))
             {
                 int textX = badgeX + circleSize + 12;
-                int textStartY = badgeY - 5;
+                int textStartY = badgeY + 5;
 
                 g.DrawString("DIGITALLY SIGNED", approvedFont, blackBrush, textX, textStartY);
 
                 if (signature != null)
                 {
-                    g.DrawString(signature.SignerName ?? "N/A", nameFont, grayBrush, textX, textStartY + 28);
-                    g.DrawString(signature.SignerTitle ?? "", detailFont, grayBrush, textX, textStartY + 42);
-                    g.DrawString(signature.SignerOrganization ?? "", detailFont, grayBrush, textX, textStartY + 54);
+                    // Increased spacing between "DIGITALLY SIGNED" and details
+                    g.DrawString(signature.SignerName ?? "N/A", nameFont, grayBrush, textX - 2, textStartY + 38);
+                    g.DrawString(signature.SignerTitle ?? "", detailFont, grayBrush, textX - 2, textStartY + 51);
+                    g.DrawString(signature.SignerOrganization ?? "", detailFont, grayBrush, textX - 2, textStartY + 63);
 
                     string dateTimeStr = signature.SignedDate.ToString("dd-MMM-yyyy HH:mm:ss");
-                    g.DrawString($"Date: {dateTimeStr}", detailFont, grayBrush, textX, textStartY + 66);
-                    g.DrawString($"Signature ID: {signature.SignatureId ?? "N/A"}", signatureIdFont, blueBrush, textX, textStartY + 78);
+                    g.DrawString($"Date: {dateTimeStr}", detailFont, grayBrush, textX - 2, textStartY + 75);
+                    g.DrawString($"Signature ID: {signature.SignatureId ?? "N/A"}", signatureIdFont, blueBrush, textX - 2, textStartY + 87);
                 }
                 else
                 {
-                    g.DrawString("Awaiting Approval", detailFont, grayBrush, textX, textStartY + 28);
+                    g.DrawString("Awaiting Approval", detailFont, grayBrush, textX - 2, textStartY + 38);
                 }
             }
         }

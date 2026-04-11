@@ -31,20 +31,18 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form4));
             pictureBox1 = new PictureBox();
             panel1 = new Panel();
+            label14 = new Label();
+            label19 = new Label();
             pictureBox11 = new PictureBox();
             pictureBox13 = new PictureBox();
             label17 = new Label();
             label22 = new Label();
             pictureBox9 = new PictureBox();
             label20 = new Label();
-            label19 = new Label();
-            pictureBox8 = new PictureBox();
-            label16 = new Label();
             pictureBox10 = new PictureBox();
             label18 = new Label();
             pictureBox7 = new PictureBox();
             label15 = new Label();
-            label14 = new Label();
             pictureBox2 = new PictureBox();
             Labour_infobox = new GroupBox();
             Contractorname = new TextBox();
@@ -92,7 +90,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox11).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox13).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox10).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -102,7 +99,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
-            panel2.SuspendLayout();
             SuspendLayout();
             // 
             // pictureBox1
@@ -118,30 +114,52 @@
             // panel1
             // 
             panel1.BackColor = SystemColors.ControlDarkDark;
+            panel1.Controls.Add(label14);
+            panel1.Controls.Add(label19);
             panel1.Controls.Add(pictureBox11);
             panel1.Controls.Add(pictureBox13);
             panel1.Controls.Add(label17);
             panel1.Controls.Add(label22);
             panel1.Controls.Add(pictureBox9);
             panel1.Controls.Add(label20);
-            panel1.Controls.Add(label19);
-            panel1.Controls.Add(pictureBox8);
-            panel1.Controls.Add(label16);
             panel1.Controls.Add(pictureBox10);
             panel1.Controls.Add(label18);
             panel1.Controls.Add(pictureBox7);
             panel1.Controls.Add(label15);
-            panel1.Controls.Add(label14);
             panel1.Location = new Point(-1, 82);
             panel1.Name = "panel1";
             panel1.Size = new Size(240, 754);
             panel1.TabIndex = 1;
             // 
+            // label14
+            // 
+            label14.AutoSize = true;
+            label14.Font = new Font("Tahoma", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label14.ForeColor = Color.White;
+            label14.Location = new Point(13, 39);
+            label14.Name = "label14";
+            label14.Size = new Size(155, 28);
+            label14.TabIndex = 75;
+            label14.Tag = "MAIN MENU";
+            label14.Text = "MAIN MENU";
+            // 
+            // label19
+            // 
+            label19.AutoSize = true;
+            label19.Font = new Font("Tahoma", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label19.ForeColor = Color.White;
+            label19.Location = new Point(11, 408);
+            label19.Name = "label19";
+            label19.Size = new Size(181, 28);
+            label19.TabIndex = 76;
+            label19.Tag = "MAIN MENU";
+            label19.Text = "MANAGEMENT";
+            // 
             // pictureBox11
             // 
             pictureBox11.Cursor = Cursors.Hand;
             pictureBox11.Image = (Image)resources.GetObject("pictureBox11.Image");
-            pictureBox11.Location = new Point(12, 265);
+            pictureBox11.Location = new Point(15, 197);
             pictureBox11.Name = "pictureBox11";
             pictureBox11.Size = new Size(44, 44);
             pictureBox11.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -152,7 +170,7 @@
             // 
             pictureBox13.Cursor = Cursors.Hand;
             pictureBox13.Image = (Image)resources.GetObject("pictureBox13.Image");
-            pictureBox13.Location = new Point(52, 670);
+            pictureBox13.Location = new Point(46, 682);
             pictureBox13.Name = "pictureBox13";
             pictureBox13.Size = new Size(44, 44);
             pictureBox13.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -165,7 +183,7 @@
             label17.AutoSize = true;
             label17.Cursor = Cursors.Hand;
             label17.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label17.Location = new Point(62, 278);
+            label17.Location = new Point(57, 208);
             label17.Name = "label17";
             label17.Size = new Size(129, 23);
             label17.TabIndex = 72;
@@ -177,7 +195,7 @@
             label22.AutoSize = true;
             label22.Cursor = Cursors.Hand;
             label22.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label22.Location = new Point(99, 681);
+            label22.Location = new Point(96, 693);
             label22.Name = "label22";
             label22.Size = new Size(70, 23);
             label22.TabIndex = 36;
@@ -188,7 +206,7 @@
             // 
             pictureBox9.Cursor = Cursors.Hand;
             pictureBox9.Image = (Image)resources.GetObject("pictureBox9.Image");
-            pictureBox9.Location = new Point(14, 448);
+            pictureBox9.Location = new Point(13, 448);
             pictureBox9.Name = "pictureBox9";
             pictureBox9.Size = new Size(44, 44);
             pictureBox9.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -206,46 +224,11 @@
             label20.TabIndex = 32;
             label20.Text = "Approved Passes";
             // 
-            // label19
-            // 
-            label19.AutoSize = true;
-            label19.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label19.ForeColor = SystemColors.ButtonFace;
-            label19.Location = new Point(12, 408);
-            label19.Name = "label19";
-            label19.Size = new Size(157, 23);
-            label19.TabIndex = 31;
-            label19.Tag = "MAIN MENU";
-            label19.Text = "MANAGEMENT";
-            // 
-            // pictureBox8
-            // 
-            pictureBox8.Cursor = Cursors.Hand;
-            pictureBox8.Image = (Image)resources.GetObject("pictureBox8.Image");
-            pictureBox8.Location = new Point(14, 206);
-            pictureBox8.Name = "pictureBox8";
-            pictureBox8.Size = new Size(40, 43);
-            pictureBox8.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox8.TabIndex = 30;
-            pictureBox8.TabStop = false;
-            // 
-            // label16
-            // 
-            label16.AutoSize = true;
-            label16.Cursor = Cursors.Hand;
-            label16.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label16.Location = new Point(62, 218);
-            label16.Name = "label16";
-            label16.Size = new Size(145, 23);
-            label16.TabIndex = 29;
-            label16.Text = "Blacklist People";
-            label16.Click += label16_Click;
-            // 
             // pictureBox10
             // 
             pictureBox10.Cursor = Cursors.Hand;
             pictureBox10.Image = (Image)resources.GetObject("pictureBox10.Image");
-            pictureBox10.Location = new Point(17, 139);
+            pictureBox10.Location = new Point(15, 134);
             pictureBox10.Name = "pictureBox10";
             pictureBox10.Size = new Size(44, 44);
             pictureBox10.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -258,7 +241,7 @@
             label18.AutoSize = true;
             label18.Cursor = Cursors.Hand;
             label18.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label18.Location = new Point(62, 151);
+            label18.Location = new Point(57, 144);
             label18.Name = "label18";
             label18.Size = new Size(129, 23);
             label18.TabIndex = 25;
@@ -269,7 +252,7 @@
             // 
             pictureBox7.Cursor = Cursors.Hand;
             pictureBox7.Image = (Image)resources.GetObject("pictureBox7.Image");
-            pictureBox7.Location = new Point(14, 71);
+            pictureBox7.Location = new Point(11, 71);
             pictureBox7.Name = "pictureBox7";
             pictureBox7.Size = new Size(44, 44);
             pictureBox7.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -287,18 +270,6 @@
             label15.TabIndex = 19;
             label15.Text = "Labour Registration";
             label15.Click += label15_Click;
-            // 
-            // label14
-            // 
-            label14.AutoSize = true;
-            label14.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label14.ForeColor = SystemColors.ButtonFace;
-            label14.Location = new Point(12, 29);
-            label14.Name = "label14";
-            label14.Size = new Size(127, 23);
-            label14.TabIndex = 0;
-            label14.Tag = "MAIN MENU";
-            label14.Text = "MAIN MENU";
             // 
             // pictureBox2
             // 
@@ -515,7 +486,7 @@
             labourid.Name = "labourid";
             labourid.PlaceholderText = "Enter Labour Id";
             labourid.Size = new Size(273, 36);
-            labourid.TabIndex = 2;
+            labourid.TabIndex = 1;
             labourid.TextChanged += textBox1_TextChanged;
             // 
             // label1
@@ -772,11 +743,11 @@
             button7.TabIndex = 11;
             button7.Text = "Back";
             button7.UseVisualStyleBackColor = false;
+            button7.Click += button7_Click;
             // 
             // panel2
             // 
             panel2.BackColor = Color.White;
-            panel2.Controls.Add(label24);
             panel2.Location = new Point(1252, -11);
             panel2.Name = "panel2";
             panel2.Size = new Size(51, 92);
@@ -787,7 +758,7 @@
             label24.AutoSize = true;
             label24.BackColor = Color.White;
             label24.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label24.Location = new Point(-10, 20);
+            label24.Location = new Point(1242, 9);
             label24.Name = "label24";
             label24.Size = new Size(34, 38);
             label24.TabIndex = 39;
@@ -799,6 +770,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1288, 833);
+            Controls.Add(label24);
             Controls.Add(panel2);
             Controls.Add(clear);
             Controls.Add(save);
@@ -819,7 +791,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox11).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox13).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox9).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox10).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
@@ -831,9 +802,8 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
-            panel2.ResumeLayout(false);
-            panel2.PerformLayout();
             ResumeLayout(false);
+            PerformLayout();
         }
 
 
@@ -885,14 +855,10 @@
         private Button save;
         private Button button7;
         private Panel panel2;
-        private Label label14;
         private PictureBox pictureBox7;
         private Label label15;
         private PictureBox pictureBox10;
         private Label label18;
-        private Label label19;
-        private PictureBox pictureBox8;
-        private Label label16;
         private PictureBox pictureBox9;
         private Label label20;
         private PictureBox pictureBox13;
@@ -904,5 +870,7 @@
         private Button button5;
         private PictureBox pictureBox11;
         private Label label17;
+        private Label label14;
+        private Label label19;
     }
 }
