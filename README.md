@@ -36,13 +36,13 @@ The system is designed to make the entry-pass process more **organized, secure, 
 ### 🏠 Entry Pass Generator
 
 <p align="center">
-  <img src="screenshots/entry-pass.png" width="800">
+  <img src="Screenshot 2025-10-16 212029.png" width="800">
 </p>
 
 ### 📋 Pass Details & Submission
 
 <p align="center">
-  <img src="screenshots/pass-details.png" width="800">
+  <img src="Screenshot 2025-10-16 094610.png" width="800">
 </p>
 
 
