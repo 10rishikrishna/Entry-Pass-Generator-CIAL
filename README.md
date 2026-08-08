@@ -44,6 +44,8 @@ The system is designed to make the entry-pass process more **organized, secure, 
 <p align="center">
   <img src="screenshots/pass-details.png" width="800">
 </p>
+
+
 ## 🏗️ Architecture
 
 The application follows a simple client-server architecture:
