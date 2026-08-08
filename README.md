@@ -31,7 +31,19 @@ The system is designed to make the entry-pass process more **organized, secure, 
 - 🛡️ Error handling and connection status messages
 
 ---
+## 📸 Screenshots
 
+### 🏠 Entry Pass Generator
+
+<p align="center">
+  <img src="screenshots/entry-pass.png" width="800">
+</p>
+
+### 📋 Pass Details & Submission
+
+<p align="center">
+  <img src="screenshots/pass-details.png" width="800">
+</p>
 ## 🏗️ Architecture
 
 The application follows a simple client-server architecture:
